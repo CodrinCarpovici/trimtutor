@@ -32,7 +32,7 @@
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
-        Launch demo modal
+        +
       </button>
 
       <!-- Modal -->
@@ -47,7 +47,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Modal title
+                Add a Workout
               </h1>
               <button
                 type="button"
@@ -60,7 +60,7 @@
               <form>
                 <div class="form-group">
                   <label for="muscleGroups">Muscle Groups</label>
-                  <select class="form-control" id="muscleGroups">
+                  <select class="form-control form-select" id="muscleGroups">
                     <!-- Needs updating! -->
                     <option>Chest</option>
                     <option>Back</option>
@@ -70,7 +70,7 @@
 
                 <div class="form-group">
                   <label for="reps">Reps</label>
-                  <select class="form-control" id="reps">
+                  <select class="form-control form-select" id="reps">
                     <!-- Needs updating! -->
                     <option>5</option>
                     <option>10</option>
@@ -80,7 +80,7 @@
 
                 <div class="form-group">
                   <label for="workoutName">Workout Name</label>
-                  <select class="form-control" id="workoutName" disabled>
+                  <select class="form-control form-select" id="workoutName" disabled>
                     <!-- Needs updating! -->
                     <option>Workout 1</option>
                     <option>Workout 2</option>
@@ -90,17 +90,17 @@
 
                 <div class="form-group">
                   <label for="time">Time</label>
-                  <select class="form-control" id="time">
+                  <select class="form-control form-select" id="time">
                     <!-- Needs updating! -->
                     <option>12:00</option>
                     <option>13:00</option>
                     <option>14:00</option>
                   </select>
                 </div>
+                <div class="modal-footer d-flex justify-content-center">
+                  <button type="submit" class="btn btn-primary">Add</button>
+                </div>
               </form>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-              <button type="button" class="btn btn-primary">Add</button>
             </div>
           </div>
         </div>
