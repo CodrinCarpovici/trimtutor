@@ -17,15 +17,30 @@
   </head>
   <body>
     <!--Navbar-->
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="calendarPage.html">Calendar</a></li>
-        <li><a href="dayworkoutPage.html">Day Workout</a></li>
-      </ul>
-    </nav>
-
-    <header></header>
+    <!--<nav>-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img class="logo" src="/our-logo" alt="TrimTutor" width="30" height="24">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="calendarPage.html">Calendar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="dayworkoutPage.html">Day Workout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <!--Jumbotron-->
     <main>
       <div class="jumbotron">
@@ -39,7 +54,11 @@
       </div>
     </main>
     <!--Footer-->
-    <footer></footer>
+    <footer>
+      <img src="assets/images/logo.png" height="50px" width="50px"alt="logo">
+      <h4>Copyright © 2023 TrimTutor</h4>
+      <a href="#top">Back to top of page</a>
+    </footer>
     <!-- Day.js -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <!-- jQuery -->
