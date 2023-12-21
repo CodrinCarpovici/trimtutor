@@ -16,7 +16,6 @@
   </head>
   <body>
     <!--Navbar-->
-    <!--<nav>-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -40,6 +39,41 @@
           </div>
         </div>
       </nav>
+    <!--Content-->
+    <div class="container mt-5">
+      <!--using a card for the Workout Summary -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Welcome to Your Workout Plan</h5> <!--'title' can be changed later-->
+          <!-- here goes the content based on user's input here -->
+          <p class="card-text">Workout Name: (user's Workout Name)</p>
+          <p class="card-text">Reps: (user's reps)</p>
+          <p class="card-text">Time: (user's time)</p>
+        </div>
+      </div>
+
+        <!--'subtitle'-->
+        <h2 class="mt-4">Suggested Workout Videos</h2>
+
+        <!--div container for videos-->
+        <div class="row mt-3">
+          <!--first video-->
+          <div class="col-md-4">
+            <!-- add first video-->
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+          </div>
+           <!--second video-->
+           <div class="col-md-4">
+            <!-- add second video-->
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+          </div>
+            <!--third video-->
+            <div class="col-md-4">
+              <!-- add third video-->
+              <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+      </div>
     <!--Footer-->
     <footer>
       <img src="assets/images/logo.png" height="50px" width="50px"alt="logo">
