@@ -1,3 +1,15 @@
+
+:root {
+
+--background-color: #353739, sans-serif; 
+--font-color: #D3D3D3, sans-serif;
+--olive-green: #88A177, sans-serif;
+--lighter-gray: #707B7C, sans-serif;
+--medium-gray: #515A5A, sans-serif;
+
+}
+
+
 .jumbotron {
   position: relative;
   /* background: url("your-image-url.jpg") center center; */
