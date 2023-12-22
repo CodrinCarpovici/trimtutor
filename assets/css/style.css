@@ -66,3 +66,8 @@ body {
   color: var(--font-color);
   font-family: var(--content-font);
 }
+
+.card {
+  background-color: var(--medium-gray);
+  color: var(--font-color);
+}
