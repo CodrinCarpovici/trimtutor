@@ -33,7 +33,7 @@
 }
 
 #homepageDescription {
-  font-family: sans-serif;
+  font-family: var(--headline-font);
   font-size: 80px;
   color: white;
   margin-bottom: 0.5em;
