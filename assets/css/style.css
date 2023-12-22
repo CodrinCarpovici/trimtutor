@@ -62,12 +62,12 @@
 }
 
 footer {
-  position: absolute;
-  bottom: -50px;
+  position: static;
+  margin-top: 25px;
+  padding-top: 25px;
   width: 100%;
   display: block;
-  padding-top: 20px;
-  height: 125px;
+  height: 150px;
   background-color: var(--background-color);
   color: var(--font-color);
   text-align: center;
