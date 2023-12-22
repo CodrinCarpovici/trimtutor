@@ -60,3 +60,19 @@
   background-color: #515a5a;
   color: #d3d3d3;
 }
+
+footer {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  display: block;
+  padding-top: 20px;
+  height: 125px;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  text-align: center;
+}
+
+footer a{
+  color: var(--font-color);
+}
