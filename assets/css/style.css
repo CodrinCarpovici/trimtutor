@@ -1,6 +1,5 @@
-
 :root {
-
+  
 --background-color: #353739; 
 --font-color: #D3D3D3;
 --olive-green: #88A177;
@@ -9,17 +8,16 @@
 --medium-gray: #515A5A;
 --headline-font: 'Roboto', sans-serif;
 --content-font:  'Montserrat', sans-serif;
-
-
+  
 }
 
-
-.jumbotron {
+#homepageJumbotron {
   position: relative;
-  /* background: url("your-image-url.jpg") center center; */
+  background: url("/assets/images/Blank\ 6\ Grids\ Collage\ \(1\).png") center
+    center;
   background-size: cover;
   overflow: hidden;
-  color: #515a5a;
+  color: white;
   text-align: center;
   padding: 150px 20px; /* Increase padding for more height */
 }
@@ -29,19 +27,21 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(53, 55, 57, 0.5);
   z-index: 1;
 }
-.content {
-  position: relative;
-  z-index: 2;
+
+#homepageHeader {
+  color: var(--font-color);
+  font-size: 40px;
 }
-.jumbotron h1 {
-  font-family: sans-serif;
-  font-size: 3em;
-  color: #707b7c;
+
+#homepageDescription {
+  font-family: var(--headline-font);
+  font-size: 80px;
+  color: white;
   margin-bottom: 0.5em;
 }
+
 .jumbotron p {
   font-family: sans-serif;
   font-size: 1.5em;
@@ -93,3 +93,75 @@ font-family: var(--headline-font);
   /* --bs-table-bg:var(--background-color) */
 }
 
+#jumbotronButton {
+  color: white;
+  padding: 20px 40px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+  border: none;
+  background-color: var(--olive-green);
+}
+#jumbotronButton:hover {
+  background-color: #515a5a;
+  color: #d3d3d3;
+}
+
+#quote {
+  color: white;
+  font-family: var(--content-font);
+  font-size: 30px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: var(--content-font);
+}
+
+.card {
+  background-color: var(--medium-gray);
+  color: var(--font-color);
+}
+
+.card-title {
+  color: var(--olive-green);
+}
+
+.card-text {
+  color: var(--font-color);
+}
+
+h2 {
+  color: var(--olive-green);
+}
+
+.row {
+  margin-top: 15px;
+}
+
+.col-md-4 {
+  margin-bottom: 15px;
+}
+
+iframe {
+  border: 0;
+}
+
+footer {
+  position: static;
+  margin-top: 25px;
+  padding-top: 25px;
+  width: 100%;
+  display: block;
+  height: 150px;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  text-align: center;
+}
+
+footer a{
+  color: var(--font-color);
+}
