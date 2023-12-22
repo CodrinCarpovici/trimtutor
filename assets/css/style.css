@@ -33,10 +33,6 @@
   font-size: 40px;
 }
 
-.content {
-  position: relative;
-  z-index: 2;
-}
 #homepageDescription {
   font-family: sans-serif;
   font-size: 80px;
