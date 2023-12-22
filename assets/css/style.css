@@ -10,6 +10,7 @@
 --headline-font: 'Roboto', sans-serif;
 --content-font:  'Montserrat', sans-serif;
 
+
 }
 
 
@@ -74,11 +75,12 @@
   transition: background-color 0.3s ease-in-out;
 }
 
+#plus-button:hover {
+  background-color: var(--hover-bright-green);
+}
 
 tr {
 text-align: center;
-
-
 }
 
 #day {
@@ -86,7 +88,9 @@ font-size: 25px;
 font-family: var(--headline-font);
 }
 
-.table{
-  background-color: #397db9 !important;
-}
+
+
+/* .table{
+  --bs-table-bg : 
+} */
 
