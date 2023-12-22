@@ -61,6 +61,42 @@
   color: #d3d3d3;
 }
 
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: var(--content-font);
+}
+
+.card {
+  background-color: var(--medium-gray);
+  color: var(--font-color);
+}
+
+.card-title {
+  color: var(--olive-green);
+}
+
+.card-text {
+  color: var(--font-color);
+}
+
+h2 {
+  color: var(--olive-green);
+}
+
+.row {
+  margin-top: 15px;
+}
+
+.col-md-4 {
+  margin-bottom: 15px;
+}
+
+iframe {
+  border: 0;
+}
+
 footer {
   position: static;
   margin-top: 25px;
@@ -76,3 +112,4 @@ footer {
 footer a{
   color: var(--font-color);
 }
+
