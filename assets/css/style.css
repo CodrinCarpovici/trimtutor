@@ -60,8 +60,60 @@
   background-color: #515a5a;
   color: #d3d3d3;
 }
+
 #quote {
   color: white;
   font-family: var(--content-font);
   font-size: 30px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: var(--content-font);
+}
+
+.card {
+  background-color: var(--medium-gray);
+  color: var(--font-color);
+}
+
+.card-title {
+  color: var(--olive-green);
+}
+
+.card-text {
+  color: var(--font-color);
+}
+
+h2 {
+  color: var(--olive-green);
+}
+
+.row {
+  margin-top: 15px;
+}
+
+.col-md-4 {
+  margin-bottom: 15px;
+}
+
+iframe {
+  border: 0;
+}
+
+footer {
+  position: static;
+  margin-top: 25px;
+  padding-top: 25px;
+  width: 100%;
+  display: block;
+  height: 150px;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  text-align: center;
+}
+
+footer a{
+  color: var(--font-color);
 }
