@@ -64,6 +64,18 @@
 }
 
 /* Modal/Form */
+.modal-header {
+  font-family: var(--headline-font);
+  background: var(--olive-green);
+}
+
+.modal-title {
+  font-weight: bold;
+}
+.modal-body {
+  font-family: var(--content-font);
+}
+
 #form-submit-btn {
   background: var(--bright-green);
   color: white;
@@ -71,5 +83,8 @@
 
 #form-submit-btn:hover {
   background: var(--hover-bright-green);
-  color: white;
+}
+
+.form-select {
+  transition: all 0.3s ease;
 }
