@@ -30,34 +30,38 @@
 
 #homepageHeader {
   color: var(--font-color);
+  font-size: 40px;
 }
 
-#homepageDescription {
-  color: var(--medium-gray);
-}
 .content {
   position: relative;
   z-index: 2;
 }
-.jumbotron h1 {
+#homepageDescription {
   font-family: sans-serif;
-  font-size: 3em;
+  font-size: 80px;
   color: white;
   margin-bottom: 0.5em;
 }
 
 #jumbotronButton {
   background-color: #d3d3d3;
-  color: #353739;
-  padding: 10px 20px;
+  color: white;
+  padding: 20px 40px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 30px;
   font-family: sans-serif;
   font-size: 1.2em;
   transition: background-color 0.3s;
   border: none;
+  background-color: var(--olive-green);
 }
 .btn:hover {
   background-color: #515a5a;
   color: #d3d3d3;
+}
+#quote {
+  color: white;
+  font-family: var(--content-font);
+  font-size: 30px;
 }
