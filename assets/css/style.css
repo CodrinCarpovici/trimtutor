@@ -1,9 +1,11 @@
+/* Root Variables */
 :root {
   
 --background-color: #353739; 
 --font-color: #D3D3D3;
---olive-green: #88A177;
---bright-green:#32A138;
+--olive-green: #77a179;
+--bright-green: #32A138;
+--hover-bright-green: #009708;
 --lighter-gray: #707B7C;
 --medium-gray: #515A5A;
 --headline-font: 'Roboto', sans-serif;
@@ -11,6 +13,15 @@
   
 }
 
+/* Body */
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: var(--content-font);
+}
+
+/* Jumbotron */
+.jumbotron {
 #homepageJumbotron {
   position: relative;
   background: url("/assets/images/Blank\ 6\ Grids\ Collage\ \(1\).png") center
@@ -109,16 +120,36 @@ font-family: var(--headline-font);
   color: #d3d3d3;
 }
 
+/* Modal/Form */
+.modal-header {
+  font-family: var(--headline-font);
+  background: var(--olive-green);
+}
+
+.modal-title {
+  font-weight: bold;
+}
+.modal-body {
+  font-family: var(--content-font);
+}
+
+#form-submit-btn {
+  background: var(--bright-green);
+  color: white;
+}
+
+#form-submit-btn:hover {
+  background: var(--hover-bright-green);
+}
+
+.form-select {
+  transition: all 0.3s ease;
+}
+
 #quote {
   color: white;
   font-family: var(--content-font);
   font-size: 30px;
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--font-color);
-  font-family: var(--content-font);
 }
 
 .card {
