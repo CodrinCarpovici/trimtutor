@@ -1,20 +1,17 @@
-
 :root {
-
---background-color: #353739; 
---font-color: #D3D3D3;
---olive-green: #88A177;
---lighter-gray: #707B7C;
---medium-gray: #515A5A;
---headline-font: 'Roboto', sans-serif;
---content-font:  'Montserrat', sans-serif;
-
+  --background-color: #353739;
+  --font-color: #d3d3d3;
+  --olive-green: #88a177;
+  --lighter-gray: #707b7c;
+  --medium-gray: #515a5a;
+  --headline-font: "Roboto", sans-serif;
+  --content-font: "Montserrat", sans-serif;
 }
-
 
 .jumbotron {
   position: relative;
-  /* background: url("your-image-url.jpg") center center; */
+  background: url("/assets/images/Blank\ 6\ Grids\ Collage\ \(1\).png") center
+    center;
   background-size: cover;
   overflow: hidden;
   color: #515a5a;
