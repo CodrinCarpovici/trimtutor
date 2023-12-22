@@ -3,7 +3,9 @@
 
 --background-color: #353739; 
 --font-color: #D3D3D3;
---olive-green: #88A177;
+--olive-green: #77a179;
+--bright-green: #32A138;
+--hover-bright-green: #009708;
 --lighter-gray: #707B7C;
 --medium-gray: #515A5A;
 --headline-font: 'Roboto', sans-serif;
@@ -62,3 +64,12 @@
 }
 
 /* Modal/Form */
+#form-submit-btn {
+  background: var(--bright-green);
+  color: white;
+}
+
+#form-submit-btn:hover {
+  background: var(--hover-bright-green);
+  color: white;
+}
