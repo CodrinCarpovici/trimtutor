@@ -61,6 +61,7 @@
   color: #d3d3d3;
 }
 
+
 body {
   background-color: var(--background-color);
   color: var(--font-color);
@@ -95,3 +96,20 @@ h2 {
 iframe {
   border: 0;
 }
+
+footer {
+  position: static;
+  margin-top: 25px;
+  padding-top: 25px;
+  width: 100%;
+  display: block;
+  height: 150px;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  text-align: center;
+}
+
+footer a{
+  color: var(--font-color);
+}
+
