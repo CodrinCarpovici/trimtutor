@@ -71,3 +71,27 @@ body {
   background-color: var(--medium-gray);
   color: var(--font-color);
 }
+
+.card-title {
+  color: var(--olive-green);
+}
+
+.card-text {
+  color: var(--font-color);
+}
+
+h2 {
+  color: var(--olive-green);
+}
+
+.row {
+  margin-top: 15px;
+}
+
+.col-md-4 {
+  margin-bottom: 15px;
+}
+
+iframe {
+  border: 0;
+}
