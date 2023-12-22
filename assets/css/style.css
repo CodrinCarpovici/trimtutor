@@ -76,7 +76,7 @@
 }
 
 #plus-button:hover {
-  background-color: var(--hover-bright-green);
+  background-color: var(--hover-bright-green) ;
 }
 
 tr {
@@ -88,7 +88,10 @@ font-size: 25px;
 font-family: var(--headline-font);
 }
 
-
+#table {
+  border: 1px solid var(--lighter-gray);
+  border-radius: 20%;
+}
 
 /* .table{
   --bs-table-bg : 
