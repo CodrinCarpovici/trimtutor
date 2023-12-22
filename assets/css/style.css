@@ -1,4 +1,4 @@
-
+/* Root Variables */
 :root {
 
 --background-color: #353739; 
@@ -11,7 +11,7 @@
 
 }
 
-
+/* Jumbotron */
 .jumbotron {
   position: relative;
   /* background: url("your-image-url.jpg") center center; */
@@ -60,3 +60,5 @@
   background-color: #515a5a;
   color: #d3d3d3;
 }
+
+/* Modal/Form */
