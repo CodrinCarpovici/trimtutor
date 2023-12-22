@@ -78,6 +78,15 @@
 tr {
 text-align: center;
 
+
 }
-/* #{}
- */
+
+#day {
+font-size: 25px;
+font-family: var(--headline-font);
+}
+
+.table{
+  background-color: #397db9 !important;
+}
+
