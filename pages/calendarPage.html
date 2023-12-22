@@ -43,12 +43,27 @@
       <div class="container mt-4">
         <div class="row">
           <div class="col-6 mx-auto">
-            <table class="table table-bordered table-success">
+            <table class="table table-bordered table-success" id="table">
               <tbody>
                 <tr>
-                  <td class="col-9">Monday</td>
-                  <td class="col-3">
+                  <td class="col-10 text-center" id="day">Monday</td>
+                  <td class="col-2">
                     <button
+                      id="plus-button"
+                      type="button"
+                      class="btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      +
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="col-10 text-center" id="day">Tuesday</td>
+                  <td class="col-2">
+                    <button
+                      id="plus-button"
                       type="button"
                       class="btn btn-primary"
                       data-bs-toggle="modal"
@@ -59,9 +74,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="col-9">Tuesday</td>
-                  <td class="col-3">
+                  <td class="col-10 text-center" id="day">Wednesday</td>
+                  <td class="col-2">
                     <button
+                      id="plus-button"
                       type="button"
                       class="btn btn-primary"
                       data-bs-toggle="modal"
@@ -72,9 +88,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="col-9">Wednesday</td>
-                  <td class="col-3">
+                  <td class="col-10 text-center" id="day">Thursday</td>
+                  <td class="col-2">
                     <button
+                      id="plus-button"
                       type="button"
                       class="btn btn-primary"
                       data-bs-toggle="modal"
@@ -85,9 +102,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="col-9">Thursday</td>
-                  <td class="col-3">
+                  <td class="col-10 text-center" id="day">Friday</td>
+                  <td class="col-2">
                     <button
+                      id="plus-button"
                       type="button"
                       class="btn btn-primary"
                       data-bs-toggle="modal"
@@ -98,9 +116,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="col-9">Friday</td>
-                  <td class="col-3">
+                  <td class="col-10 text-center" id="day">Saturday</td>
+                  <td class="col-2">
                     <button
+                      id="plus-button"
                       type="button"
                       class="btn btn-primary"
                       data-bs-toggle="modal"
@@ -111,22 +130,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="col-9">Saturday</td>
-                  <td class="col-3">
+                  <td class="col-10 text-center" id="day">Sunday</td>
+                  <td class="col-2 ">
                     <button
-                      type="button"
-                      class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                    >
-                      +
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="col-9">Sunday</td>
-                  <td class="col-3">
-                    <button
+                      id="plus-button"
                       type="button"
                       class="btn btn-primary"
                       data-bs-toggle="modal"
