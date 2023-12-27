@@ -12,7 +12,8 @@ const displayTable = () => {
     let tableRow = $("<tr>");
     let tableData = $("<td>")
       .addClass("col-10 text-center")
-      .text(nextDay.format("dddd"));
+      .text(nextDay.format("dddd"))
+      .attr('id',"day")
     let tableDataButton = $("<td>").addClass("col-2 text-center");
     let button = $("<button>")
       .attr({
