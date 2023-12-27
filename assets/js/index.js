@@ -3,6 +3,7 @@ let key = {
     headers: { 'x-api-key': 'TIDNLHTjaGEfQDFhfKVjsg==w57dRJ7ghY0iLRZ4' }
   }
 let queryURL = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
+let exerciseURL ="https://api.api-ninjas.com/v1/exercises?muscle="
 
 function generateQuote(){
 fetch(queryURL, key)
@@ -11,7 +12,6 @@ fetch(queryURL, key)
   })
   .then(function (data) {
     let text = data[0].quote;
-    console.log(text.length);
     if (text.length > 50) {
         generateQuote();
     } else {
@@ -22,5 +22,21 @@ fetch(queryURL, key)
     $("#quote").append(author);
   }});
 }
+
+function generateExercises(){
+  let mGroup = $('#muscleGroups').find(':selected').val();
+  let difficulty = $('#difficulty').find(':selected').val();
+  exerciseURL += mGroup + "&difficulty=" + difficulty;
+
+  
+}
+
+$("#muscleGroups").change(function() {
+  generateExercises();
+})
+
+$("#difficulty").change(function() {
+  generateExercises();
+})
 
 generateQuote();
