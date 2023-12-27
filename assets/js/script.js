@@ -26,6 +26,11 @@ const displayTable =  () => {
   {
     let nextDay = currentDate.add(day, 'day')
 
+    // Dynamically display the table 
+    let tableRow = $('<tr>')
+    let tableData = $('<td>').addClass("col-10 text-center").text(nextDay.format('dddd'))
+    table.append(tableRow ,tableData)
+
   }
 
 }
