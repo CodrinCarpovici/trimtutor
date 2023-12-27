@@ -1,4 +1,4 @@
-let key = {
+var key = {
     method: 'GET',
     headers: { 'x-api-key': 'TIDNLHTjaGEfQDFhfKVjsg==w57dRJ7ghY0iLRZ4' }
   }
@@ -28,9 +28,14 @@ function generateExercises(){
   let difficulty = $('#difficulty').find(':selected').val();
   exerciseURL += mGroup + "&difficulty=" + difficulty;
 
-  
+  fetch(exerciseURL, key)
+   .then(function (response) {
+      return response.json();
+    })
+  .then(function (data) {
+    let workouts = data;
+})
 }
-
 $("#muscleGroups").change(function() {
   generateExercises();
 })
