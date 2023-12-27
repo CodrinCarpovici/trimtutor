@@ -133,6 +133,10 @@ tr {
 --bs-table-bg:#e7b416
 }
 
+.future{
+  --bs-table-bg:#99c140
+}
+
 /* Modal/Form */
 .modal-header {
   font-family: var(--headline-font);
