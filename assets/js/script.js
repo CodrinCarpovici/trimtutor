@@ -14,20 +14,26 @@ const displayTable = () => {
       .addClass("col-10 text-center")
       .text(nextDay.format("dddd"))
       .attr('id',"day")
+    
     let tableDataButton = $("<td>").addClass("col-2 text-center");
     let button = $("<button>")
       .attr({
-        id: "plus-button",
-        type: "button",
-        class: "btn btn-primary",
+        "id": "plus-button",
+        "type": "button",
+        "class": "btn btn-primary",
         "data-bs-toggle": "modal",
         "data-bs-target": "#exampleModal",
       })
       .text("+");
-
-    tableRow.append(tableData, tableDataButton.append(button));
-
+    tableDataButton.append(button)
+    tableRow.append(tableData, tableDataButton);
     table.append(tableRow);
+
+    if (day==0) {
+      tableRow.addClass('present')
+    }
+
+    
   }
 };
 
