@@ -27,4 +27,4 @@ const showVideos = function (search) {
     });
 };
 
-showVideos('biceps curls');
+showVideos('triceps curls');
