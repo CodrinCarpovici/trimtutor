@@ -130,10 +130,10 @@ tr {
   border-radius: 15px;
   overflow: hidden; 
 }
+
 .table-bordered>:not(caption)>*>* {
   border-width:0px
 }
-
 
 .present{
 --bs-table-bg:#e7b416

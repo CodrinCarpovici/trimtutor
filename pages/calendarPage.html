@@ -45,104 +45,8 @@
           <div class="col-6 mx-auto">
             <table class="table table-bordered table-success" id="table">
               <tbody>
-                <tr>
-                  <td class="col-10 text-center" id="day">Monday</td>
-                  <td class="col-2">
-                    <button
-                      id="plus-button"
-                      type="button"
-                      class="btn"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                    >
-                      +
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="col-10 text-center" id="day">Tuesday</td>
-                  <td class="col-2">
-                    <button
-                      id="plus-button"
-                      type="button"
-                      class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                    >
-                      +
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="col-10 text-center" id="day">Wednesday</td>
-                  <td class="col-2">
-                    <button
-                      id="plus-button"
-                      type="button"
-                      class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                    >
-                      +
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="col-10 text-center" id="day">Thursday</td>
-                  <td class="col-2">
-                    <button
-                      id="plus-button"
-                      type="button"
-                      class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                    >
-                      +
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="col-10 text-center" id="day">Friday</td>
-                  <td class="col-2">
-                    <button
-                      id="plus-button"
-                      type="button"
-                      class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                    >
-                      +
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="col-10 text-center" id="day">Saturday</td>
-                  <td class="col-2">
-                    <button
-                      id="plus-button"
-                      type="button"
-                      class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                    >
-                      +
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="col-10 text-center" id="day">Sunday</td>
-                  <td class="col-2 ">
-                    <button
-                      id="plus-button"
-                      type="button"
-                      class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                    >
-                      +
-                    </button>
-                  </td>
-                </tr>
+                <!-- Dynamically create the table -->
+                
               </tbody>
             </table>
           </div>
@@ -174,30 +78,38 @@
                 <div class="form-group">
                   <label for="muscleGroups">Muscle Groups</label>
                   <select class="form-control form-select" id="muscleGroups">
-                    <!-- Needs updating! -->
+                    <!--muscle groups used by api added to form -->
+                    <option>Abdominals</option>
+                    <option>Abductors</option>
+                    <option>Biceps</option>
+                    <option>Calves</option>
                     <option>Chest</option>
-                    <option>Back</option>
-                    <option>Legs</option>
+                    <option>Forearms</option>
+                    <option>Glutes</option>
+                    <option>Hamstrings</option>
+                    <option>Lats</option>
+                    <option>Lower_Back</option>
+                    <option>Middle_Back</option>
+                    <option>Neck</option>
+                    <option>Quadrceps</option>
+                    <option>Traps</option>
+                    <option>Triceps</option>
                   </select>
                 </div>
 
                 <div class="form-group">
-                  <label for="reps">Reps</label>
-                  <select class="form-control form-select" id="reps">
-                    <!-- Needs updating! -->
-                    <option>5</option>
-                    <option>10</option>
-                    <option>15</option>
+                  <label for="difficulty">Difficulty</label>
+                  <select class="form-control form-select" id="difficulty">
+                    <!--difficulty used by apis added -->
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
                   </select>
                 </div>
 
                 <div class="form-group">
                   <label for="workoutName">Workout Name</label>
                   <select class="form-control form-select" id="workoutName" disabled>
-                    <!-- Needs updating! -->
-                    <option>Workout 1</option>
-                    <option>Workout 2</option>
-                    <option>Workout 3</option>
+                    
                   </select>
                 </div>
 
@@ -237,7 +149,7 @@
       crossorigin="anonymous"
     ></script>
     <!--script.js-->
-    <script src="../assets//js/script.js"></script>
-    
+    <script src="../assets/js/api-ninjas.js"></script>
+    <script src="../assets/js/script.js"></script>
   </body>
 </html>
