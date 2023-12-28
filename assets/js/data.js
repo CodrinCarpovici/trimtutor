@@ -21,7 +21,7 @@ const showVideos = function (search) {
         // Create an iframe for embedding the YouTube video
         const videoContainer = $("<iframe>").attr({
           width: "100%",
-          height: "200",
+          height: "250",
           src: `https://www.youtube.com/embed/${videoId}?origin=${window.location.origin}`,
           frameborder: "0",
           allowfullscreen: true,

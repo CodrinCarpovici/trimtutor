@@ -116,6 +116,8 @@ body {
 
 tr {
   text-align: center;
+  border-radius: 15px;
+  overflow: hidden; 
 }
 
 #day {
@@ -127,6 +129,9 @@ tr {
   border: 1px ridge var(--lighter-gray); 
   border-radius: 15px;
   overflow: hidden; 
+}
+.table-bordered>:not(caption)>*>* {
+  border-width:0px
 }
 
 
