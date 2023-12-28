@@ -59,6 +59,15 @@ $(document).ready(function () {
   select.val(newTime);
   select.trigger('change'); 
 }
+
+//Function to decrement time by 15 minutes
+function decrementTime() {
+  var select = $("#time");
+  var currentTime = select.val();
+  var newTime = dayjs(currentTime, "HH:mm").subtract(15, "minute").format("HH:mm");
+  select.val(newTime);
+  select.trigger('change');
+}
 // Event listener for increment
 $("#incrementBtn").click(incrementTime);
 displayTable();
