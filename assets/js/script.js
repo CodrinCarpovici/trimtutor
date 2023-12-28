@@ -39,6 +39,7 @@ const displayTable = () => {
   }
 };
 
+// Time increment/decrement function:
 $(document).ready(function () {
   // Initializing datetimepicker
   $('#time').datetimepicker({
@@ -50,5 +51,13 @@ $(document).ready(function () {
   $('#time').val('12:00');
  });
   
+ //Function to increment time by 15 minutes
+ function incrementTime() {
+  var select = $("#time");
+  var currentTime = select.val();
+  var newTime = dayjs(currentTime, "HH:mm").add(15, "minute").format("HH:mm");
+  select.val(newTime);
+  select.trigger('change'); 
+}
 
 displayTable();
