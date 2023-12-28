@@ -11,9 +11,11 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <!-- Bootstrap datetimepicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
     <!--Stylesheet-->
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <!--font awesome-->
+    <!--font awesome CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   </head>
   <body>
@@ -111,19 +113,17 @@
                 <div class="form-group">
                   <label for="workoutName">Workout Name</label>
                   <select class="form-control form-select" id="workoutName" disabled>
-                    
+                  
                   </select>
                 </div>
+                
                 <!--Time (Increment and Decrement)-->
                 <div class="container mt-4">
                   <div class="row">
                     <div class="col-6 mx-auto">
                       <div class="custom-dropdown">
                         <label for="time">Time</label>
-                        <select class="form-control form-select" id="time">
-                          <!-- Default time is 12:00 -->
-                          <option value="12:00">12:00 PM</option>
-                        </select>
+                        <input type="text" id="time" class="form-control">
                         <button class="btn btn-secondary" type="button" id="decrementBtn">
                           <i class="fas fa-caret-down"></i>
                         </button>
@@ -134,6 +134,7 @@
                     </div>
                   </div>
                 </div>
+ 
                 <div class="modal-footer d-flex justify-content-center">
                   <button type="submit" class="btn btn-primary" id="form-submit-btn">Save</button> <!--changed this to 'Save' from 'Add'-->
                 </div>
@@ -150,8 +151,6 @@
       <h4>Copyright © 2023 TrimTutor</h4>
       <a href="#top">Back to top of page</a>
     </footer>
-    <!-- Day.js -->
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--Bootstrap JS-->
@@ -160,10 +159,14 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <!-- Bootstrap datetimepicker JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+     <!-- Day.js -->
+     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <!--script.js-->
     <script src="../assets/js/api-ninjas.js"></script>
     <script src="../assets/js/script.js"></script>
-
     <!--font Awesome JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
   </body>
