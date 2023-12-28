@@ -1,7 +1,7 @@
 // Youtube API Key
 const apiKey = "AIzaSyDQsjuseJi8yZC7IzSY_V3a6W8_Z1lrQrA";
 
-const targetDiv = $(".row.mt-3");
+const rowDiv = $(".row.mt-3");
 
 // Function to fetch YouTube video based on a search word
 const showVideos = function (search) {
@@ -29,7 +29,7 @@ const showVideos = function (search) {
 
         videoDiv.append(videoContainer);
 
-        targetDiv.append(videoDiv);
+        rowDiv.append(videoDiv);
       }
     });
 };
