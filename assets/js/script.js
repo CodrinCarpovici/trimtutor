@@ -13,3 +13,14 @@ function populateMuscleGroups() {
     muscleGroupsSelect.appendChild(option);
   });
 }
+// Initial population of options
+populateMuscleGroups();
+
+// Event listener for the change event on the select element
+muscleGroupsSelect.addEventListener("change", function () {
+  // Get the selected value
+  const selectedMuscleGroup = muscleGroupsSelect.value;
+
+  // Store the selected value in local storage
+  localStorage.setItem("selectedMuscleGroup", selectedMuscleGroup);
+});
