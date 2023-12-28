@@ -39,5 +39,23 @@ const displayTable = () => {
   }
 };
 
+// Function to populate time options in 15-minute intervals
+function populateTimeOptions() {
+  var select = document.getElementById("time");
+  select.innerHTML = "";
+
+  for (var hours = 0; hours < 24; hours++) {
+    for (var minutes = 0; minutes < 60; minutes += 15) {
+      var timeString =
+        (hours < 10 ? "0" : "") + hours + ":" + (minutes < 10 ? "0" : "") + minutes;
+      var option = document.createElement("option");
+      option.value = timeString;
+      option.text = timeString;
+      select.appendChild(option);
+    }
+  }
+}
+
+
 
 displayTable();

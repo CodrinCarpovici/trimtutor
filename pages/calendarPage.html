@@ -115,22 +115,25 @@
                   </select>
                 </div>
                 <!--Time (Increment and Decrement)-->
-                <div class="form-group">
-                  <label for="time">Time</label>
-                  <div class="input-group">
-                    <select class="form-control form-select" id="time">
-                      <!-- Populate the options dynamically using JavaScript -->
-                    </select>
-                    <div class="input-group-append">
-                      <button class="btn btn-secondary" type="button" onclick="decrementTime()">
-                        <i class="fas fa-caret-down"></i>
-                      </button>
-                      <button class="btn btn-secondary" type="button" onclick="incrementTime()">
-                        <i class="fas fa-caret-up"></i>
-                      </button>
+                <div class="container mt-4">
+                  <div class="row">
+                    <div class="col-6 mx-auto">
+                      <div class="custom-dropdown">
+                        <label for="time">Time</label>
+                        <select class="form-control form-select" id="time">
+                          <!-- Default time is 12:00 -->
+                          <option value="12:00">12:00 PM</option>
+                        </select>
+                        <button class="btn btn-secondary" type="button" id="decrementBtn">
+                          <i class="fas fa-caret-down"></i>
+                        </button>
+                        <button class="btn btn-secondary" type="button" id="incrementBtn">
+                          <i class="fas fa-caret-up"></i>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>  
+                </div>
                 <div class="modal-footer d-flex justify-content-center">
                   <button type="submit" class="btn btn-primary" id="form-submit-btn">Save</button> <!--changed this to 'Save' from 'Add'-->
                 </div>
@@ -160,5 +163,8 @@
     <!--script.js-->
     <script src="../assets/js/api-ninjas.js"></script>
     <script src="../assets/js/script.js"></script>
+
+    <!--font Awesome JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
   </body>
 </html>

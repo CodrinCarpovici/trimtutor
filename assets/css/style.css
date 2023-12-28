@@ -171,6 +171,24 @@ tr {
   transition: all 0.3s ease;
 }
 
+/* Time  */
+.custom-dropdown {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.custom-dropdown .form-control {
+  flex: 1;
+  margin-right: 5px;
+}
+.custom-dropdown label {
+  margin-right: 5px; 
+}
+.custom-dropdown .btn {
+  margin-left: 5px;
+}
+
 /* Day Workout Page */
 
 .card {
