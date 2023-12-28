@@ -115,8 +115,22 @@
                   </select>
                 </div>
                 <!--Time (Increment and Decrement)-->
-              
-                
+                <div class="form-group">
+                  <label for="time">Time</label>
+                  <div class="input-group">
+                    <select class="form-control form-select" id="time">
+                      <!-- Populate the options dynamically using JavaScript -->
+                    </select>
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="button" onclick="decrementTime()">
+                        <i class="fas fa-caret-down"></i>
+                      </button>
+                      <button class="btn btn-secondary" type="button" onclick="incrementTime()">
+                        <i class="fas fa-caret-up"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>  
                 <div class="modal-footer d-flex justify-content-center">
                   <button type="submit" class="btn btn-primary" id="form-submit-btn">Save</button> <!--changed this to 'Save' from 'Add'-->
                 </div>
