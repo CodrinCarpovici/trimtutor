@@ -3,7 +3,7 @@ const apiKey = "AIzaSyDQsjuseJi8yZC7IzSY_V3a6W8_Z1lrQrA";
 
 const rowDiv = $(".row.mt-3");
 
-// Function to fetch YouTube video based on a search word
+// Function to fetch YouTube video based on search words
 const showVideos = function (search) {
   const queryURL = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&q=${search}&type=video&maxResults=3&order=relevance&videoEmbeddable=true`;
 
