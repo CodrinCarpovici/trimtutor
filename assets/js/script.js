@@ -41,33 +41,36 @@ const displayTable = () => {
 
 // Time increment/decrement function:
 $(document).ready(function () {
-  // Initializing datetimepicker
+  // Initializing DateTimePicker
   $('#time').datetimepicker({
-    format: 'HH:mm',
-    stepping: 15
+   format: 'HH:mm',
+   stepping: 15
   });
  
-  // Default time is 12:00
+  // default time is 12:00
   $('#time').val('12:00');
+ 
+  // Function to increment time by 15 minutes
+  function incrementTime() {
+   var select = $("#time");
+   var currentTime = select.val();
+   var newTime = moment(currentTime, "HH:mm").add(15, "minute").format("HH:mm");
+   select.val(newTime);
+   select.trigger('change'); 
+  }
+ 
+  // Function to decrement time by 15 minutes
+  function decrementTime() {
+   var select = $("#time");
+   var currentTime = select.val();
+   var newTime = moment(currentTime, "HH:mm").subtract(15, "minute").format("HH:mm");
+   select.val(newTime);
+   select.trigger('change');
+  }
+ 
+  $("#incrementBtn").click(incrementTime);
+  $("#decrementBtn").click(decrementTime);
  });
-  
- //Function to increment time by 15 minutes
- function incrementTime() {
-  var select = $("#time");
-  var currentTime = select.val();
-  var newTime = dayjs(currentTime, "HH:mm").add(15, "minute").format("HH:mm");
-  select.val(newTime);
-  select.trigger('change'); 
-}
+ 
 
-//Function to decrement time by 15 minutes
-function decrementTime() {
-  var select = $("#time");
-  var currentTime = select.val();
-  var newTime = dayjs(currentTime, "HH:mm").subtract(15, "minute").format("HH:mm");
-  select.val(newTime);
-  select.trigger('change');
-}
-// Event listener for increment
-$("#incrementBtn").click(incrementTime);
 displayTable();
