@@ -59,5 +59,6 @@ $(document).ready(function () {
   select.val(newTime);
   select.trigger('change'); 
 }
-
+// Event listener for increment
+$("#incrementBtn").click(incrementTime);
 displayTable();
