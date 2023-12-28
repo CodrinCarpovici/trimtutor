@@ -126,7 +126,15 @@ tr {
 #table {
   border: 1px solid var(--lighter-gray);
   border-radius: 10px;
-  /* --bs-table-bg:var(--background-color) */
+  
+}
+
+.present{
+--bs-table-bg:#e7b416
+}
+
+.future{
+  --bs-table-bg:#99c140
 }
 
 /* Modal/Form */
