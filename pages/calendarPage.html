@@ -20,42 +20,82 @@
   </head>
   <body>
     <!--Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">
-            <img class="logo" src="/our-logo" alt="TrimTutor" width="30" height="24">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="calendarPage.html">Calendar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="dayworkoutPage.html">Day Workout</a>
-              </li>
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            class="logo"
+            src="/our-logo"
+            alt="TrimTutor"
+            width="30"
+            height="24"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="calendarPage.html"
+                >Calendar</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="dayworkoutPage.html"
+                >Day Workout</a
+              >
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1 class="display-4" id="calendarTitle">
+          Welcome to your customisable calendar
+        </h1>
+        <p id="calendarDescription">Start planning your workout week now!</p>
+      </div>
+    </div>
     <main>
       <div class="container mt-4">
         <div class="row">
           <div class="col-6 mx-auto">
             <table class="table table-bordered table-success" id="table">
               <tbody>
+
                 <!-- Dynamically create the table -->
-                
+         
               </tbody>
             </table>
           </div>
         </div>
       </div>
+
       <!-- Modal -->
       <div
         class="modal fade"
@@ -81,23 +121,13 @@
               <form>
                 <div class="form-group">
                   <label for="muscleGroups">Muscle Groups</label>
+                  <select
+                    class="form-control form-select"
+                    id="muscleGroups"
+                  ></select>
                   <select class="form-control form-select" id="muscleGroups">
                     <!--muscle groups used by api added to form -->
-                    <option>Abdominals</option>
-                    <option>Abductors</option>
-                    <option>Biceps</option>
-                    <option>Calves</option>
-                    <option>Chest</option>
-                    <option>Forearms</option>
-                    <option>Glutes</option>
-                    <option>Hamstrings</option>
-                    <option>Lats</option>
-                    <option>Lower_Back</option>
-                    <option>Middle_Back</option>
-                    <option>Neck</option>
-                    <option>Quadrceps</option>
-                    <option>Traps</option>
-                    <option>Triceps</option>
+                  
                   </select>
                 </div>
 
@@ -112,7 +142,9 @@
 
                 <div class="form-group">
                   <label for="workoutName">Workout Name</label>
+
                   <select class="form-control form-select" id="workoutName" disabled>
+
                   
                   </select>
                 </div>
@@ -146,10 +178,10 @@
         </div>
       </div>
     </main>
-     
-   <!--Footer-->
+
+    <!--Footer-->
     <footer>
-      <img src="assets/images/logo.png" height="50px" width="50px"alt="logo">
+      <img src="assets/images/logo.png" height="50px" width="50px" alt="logo" />
       <h4>Copyright © 2023 TrimTutor</h4>
       <a href="#top">Back to top of page</a>
     </footer>
