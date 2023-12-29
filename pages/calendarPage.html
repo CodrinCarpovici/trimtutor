@@ -12,11 +12,17 @@
       crossorigin="anonymous"
     />
     <!-- Bootstrap datetimepicker CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
+    />
     <!--Stylesheet-->
     <link rel="stylesheet" href="../assets/css/style.css" />
     <!--font awesome CSS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
   </head>
   <body>
     <!--Navbar-->
@@ -87,9 +93,7 @@
           <div class="col-6 mx-auto">
             <table class="table table-bordered table-success" id="table">
               <tbody>
-
                 <!-- Dynamically create the table -->
-         
               </tbody>
             </table>
           </div>
@@ -121,13 +125,8 @@
               <form>
                 <div class="form-group">
                   <label for="muscleGroups">Muscle Groups</label>
-                  <select
-                    class="form-control form-select"
-                    id="muscleGroups"
-                  ></select>
                   <select class="form-control form-select" id="muscleGroups">
                     <!--muscle groups used by api added to form -->
-                  
                   </select>
                 </div>
 
@@ -143,10 +142,11 @@
                 <div class="form-group">
                   <label for="workoutName">Workout Name</label>
 
-                  <select class="form-control form-select" id="workoutName" disabled>
-
-                  
-                  </select>
+                  <select
+                    class="form-control form-select"
+                    id="workoutName"
+                    disabled
+                  ></select>
                 </div>
                 <!--Time (Increment and Decrement)-->
                 <div class="container mt-4">
@@ -155,22 +155,36 @@
                       <div class="custom-dropdown">
                         <label for="time">Time</label>
                         <div class="input-group">
-                        <input type="text" id="time" class="form-control">
-                        <button class="btn btn-secondary" type="button" id="decrementBtn">
-                          <i class="fas fa-caret-down"></i>
-                        </button>
-                        <button class="btn btn-secondary" type="button" id="incrementBtn">
-                          <i class="fas fa-caret-up"></i>
-                        </button>
+                          <input type="text" id="time" class="form-control" />
+                          <button
+                            class="btn btn-secondary"
+                            type="button"
+                            id="decrementBtn"
+                          >
+                            <i class="fas fa-caret-down"></i>
+                          </button>
+                          <button
+                            class="btn btn-secondary"
+                            type="button"
+                            id="incrementBtn"
+                          >
+                            <i class="fas fa-caret-up"></i>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
- 
- 
+
                 <div class="modal-footer d-flex justify-content-center">
-                  <button type="submit" class="btn btn-primary" id="form-submit-btn">Save</button> <!--changed this to 'Save' from 'Add'-->
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="form-submit-btn"
+                  >
+                    Save
+                  </button>
+                  <!--changed this to 'Save' from 'Add'-->
                 </div>
               </form>
             </div>
@@ -196,8 +210,8 @@
     <!-- Bootstrap datetimepicker JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-     <!-- Day.js -->
-     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <!-- Day.js -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <!--script.js-->
     <script src="../assets/js/api-ninjas.js"></script>
     <script src="../assets/js/script.js"></script>

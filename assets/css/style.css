@@ -1,4 +1,4 @@
-/* Root Variables */
+/* ROOT VARIABLES */
 :root {
   --background-color: #353739;
   --font-color: #d3d3d3;
@@ -11,18 +11,15 @@
   --content-font: "Montserrat", sans-serif;
 }
 
-/* Body */
+/* BODY */
 body {
   background-color: var(--background-color);
   color: var(--font-color);
   font-family: var(--content-font);
 }
 
+/* HOMEPAGE */
 /* Jumbotron */
-.jumbotron {
-
-}
-
 #homepageJumbotron {
   position: relative;
   background: url("/assets/images/Blank\ 6\ Grids\ Collage\ \(1\).png") center
@@ -101,8 +98,9 @@ body {
   font-size: 30px;
 }
 
-/* Calendar Page */
+/* CALENDAR PAGE */
 
+/* Plus Button */
 #plus-button {
   background-color: var(--bright-green);
   color: var(--font-color);
@@ -116,10 +114,17 @@ body {
   background-color: var(--hover-bright-green);
 }
 
+/* Table */
+#table {
+  border: 1px ridge var(--lighter-gray);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
 tr {
   text-align: center;
   border-radius: 15px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 #day {
@@ -127,22 +132,16 @@ tr {
   font-family: var(--headline-font);
 }
 
-#table {
-  border: 1px ridge var(--lighter-gray); 
-  border-radius: 15px;
-  overflow: hidden; 
+.table-bordered > :not(caption) > * > * {
+  border-width: 0px;
 }
 
-.table-bordered>:not(caption)>*>* {
-  border-width:0px
+.present {
+  --bs-table-bg: #e7b416;
 }
 
-.present{
---bs-table-bg:#e7b416
-}
-
-.future{
-  --bs-table-bg:#99c140
+.future {
+  --bs-table-bg: #99c140;
 }
 
 /* Modal/Form */
@@ -171,13 +170,10 @@ tr {
   transition: all 0.3s ease;
 }
 
-/*time*/ 
+/*time*/
 /*need to add some CSS for the buttons and the time input field*/
- 
- 
- 
 
-/* Day Workout Page */
+/* WORKOUT PAGE */
 
 .card {
   background-color: var(--medium-gray);
@@ -207,10 +203,9 @@ h2 {
 iframe {
   border: 0;
   border-radius: 10px;
-  
 }
 
-/* Footer */
+/* FOOTER */
 
 footer {
   position: static;
