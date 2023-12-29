@@ -20,7 +20,9 @@ body {
 
 /* Jumbotron */
 .jumbotron {
+
 }
+
 #homepageJumbotron {
   position: relative;
   background: url("/assets/images/Blank\ 6\ Grids\ Collage\ \(1\).png") center
@@ -168,6 +170,12 @@ tr {
 .form-select {
   transition: all 0.3s ease;
 }
+
+/*time*/ 
+/*need to add some CSS for the buttons and the time input field*/
+ 
+ 
+ 
 
 /* Day Workout Page */
 
