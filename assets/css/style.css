@@ -116,6 +116,8 @@ body {
 
 tr {
   text-align: center;
+  border-radius: 15px;
+  overflow: hidden; 
 }
 
 #day {
@@ -124,9 +126,21 @@ tr {
 }
 
 #table {
-  border: 1px solid var(--lighter-gray);
-  border-radius: 10px;
-  /* --bs-table-bg:var(--background-color) */
+  border: 1px ridge var(--lighter-gray); 
+  border-radius: 15px;
+  overflow: hidden; 
+}
+
+.table-bordered>:not(caption)>*>* {
+  border-width:0px
+}
+
+.present{
+--bs-table-bg:#e7b416
+}
+
+.future{
+  --bs-table-bg:#99c140
 }
 
 /* Modal/Form */
@@ -184,6 +198,8 @@ h2 {
 
 iframe {
   border: 0;
+  border-radius: 10px;
+  
 }
 
 /* Footer */
