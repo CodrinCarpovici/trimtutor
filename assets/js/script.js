@@ -127,3 +127,4 @@ $(document).ready(function () {
       $('#workoutName').prop('disabled', !($('#muscleGroups').val() && $('#difficulty').val()));
   });
 });
+
