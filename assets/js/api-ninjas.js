@@ -42,6 +42,17 @@ function generateExercises(){
     })
   .then(function (data) {
     let workouts = data;
+
+    //clear any existing exercises
+    $('#workoutName').children().remove().end()
+    for (let i=0; i<workouts.length; i++) {
+      
+      //create option for each exercise adding name into option
+      $("#workoutName").append($('<option>', {
+        value: i,
+        text: workouts[i].name
+      }));
+    }
 })
 }
 
