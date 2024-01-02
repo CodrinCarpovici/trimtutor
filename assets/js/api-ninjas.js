@@ -6,7 +6,7 @@ var key = {
 
 //api urls used in project
 let queryURL = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
-let exerciseURL ="https://api.api-ninjas.com/v1/exercises?muscle="
+
 
 //generate quote for main page
 function generateQuote(){
@@ -34,7 +34,7 @@ function generateExercises(){
   let mGroup = $('#muscleGroups').find(':selected').val();
   let difficulty = $('#difficulty').find(':selected').val();
   //custom link for options selected
-  exerciseURL += mGroup + "&difficulty=" + difficulty;
+  let exerciseURL ="https://api.api-ninjas.com/v1/exercises?muscle=" + mGroup + "&difficulty=" + difficulty;
 
   fetch(exerciseURL, key)
    .then(function (response) {
