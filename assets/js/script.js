@@ -10,8 +10,8 @@ const muscleGroupsArray = [
   "Glutes",
   "Hamstrings",
   "Lats",
-  "Lower Back",
-  "Middle Back",
+  "Lower_Back",
+  "Middle_Back",
   "Neck",
   "Quadrceps",
   "Traps",
@@ -20,7 +20,6 @@ const muscleGroupsArray = [
 
 // Document Elements
 const table = $("tbody");
-
 // Time Select
 const select = $("#time");
 
