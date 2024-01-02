@@ -120,3 +120,11 @@ $(document).ready(function () {
   $("#incrementBtn").click(incrementTime);
   $("#decrementBtn").click(decrementTime);
 });
+
+// Enables WorkoutName field after MuscleGroup and Difficulty were selected 
+$(document).ready(function () {
+  $('#muscleGroups, #difficulty').on('change', function () {
+      $('#workoutName').prop('disabled', !($('#muscleGroups').val() && $('#difficulty').val()));
+  });
+});
+
