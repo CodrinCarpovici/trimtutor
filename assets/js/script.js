@@ -25,7 +25,7 @@ const select = $("#time");
 // Form
 const workoutForm = $("#workoutForm");
 // Save Button
-const saveBtn = $("#form-submit-btn")
+const saveBtn = $("#form-submit-btn");
 
 const displayTable = () => {
   // Current Day
@@ -64,8 +64,6 @@ const displayTable = () => {
       table.addClass("future");
     }
   }
-
-  
 };
 
 displayTable();
@@ -84,15 +82,6 @@ function populateMuscleGroups() {
 }
 // Initial population of options
 populateMuscleGroups();
-
-// Event listener for the change event on the select element
-muscleGroupsSelect.addEventListener("change", function () {
-  // Get the selected value
-  const selectedMuscleGroup = muscleGroupsSelect.value;
-
-  // Store the selected value in local storage
-  localStorage.setItem("selectedMuscleGroup", selectedMuscleGroup);
-});
 
 // Time increment/decrement function
 $(document).ready(function () {
@@ -137,4 +126,21 @@ $(document).ready(function () {
       !($("#muscleGroups").val() && $("#difficulty").val())
     );
   });
+});
+
+// On form submit
+workoutForm.on("submit", function (e) {
+  e.preventDefault();
+
+  // Getting form data to store in local storage
+  const formData = {
+    selectedMuscleGroup: $("#muscleGroups").val(),
+    difficulty: $("#difficulty").val(),
+    workoutName: $("#workoutName").val(),
+    time: $("#time").val(),
+    day: $("#plus-button").data("date"),
+  };
+
+  // Store form data in local storage
+  localStorage.setItem("formData", JSON.stringify(formData));
 });
