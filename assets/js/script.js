@@ -131,3 +131,10 @@ $(document).ready(function () {
     );
   });
 });
+//Clear data from the modal's rows if are past the current day
+function clearPastDaysFromTable() {
+  // Get the current date
+  const currentDate = dayjs();
+  // Get all table rows
+  const rows = $("#table tbody tr");
+}
