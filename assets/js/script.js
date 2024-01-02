@@ -1,5 +1,6 @@
 const table = $("tbody");
-
+//call function to clear the past day
+clearPastDaysFromTable();
 const displayTable = () => {
   // Current Day
   const currentDate = dayjs();
@@ -121,10 +122,12 @@ $(document).ready(function () {
   $("#decrementBtn").click(decrementTime);
 });
 
-// Enables WorkoutName field after MuscleGroup and Difficulty were selected 
+// Enables WorkoutName field after MuscleGroup and Difficulty were selected
 $(document).ready(function () {
-  $('#muscleGroups, #difficulty').on('change', function () {
-      $('#workoutName').prop('disabled', !($('#muscleGroups').val() && $('#difficulty').val()));
+  $("#muscleGroups, #difficulty").on("change", function () {
+    $("#workoutName").prop(
+      "disabled",
+      !($("#muscleGroups").val() && $("#difficulty").val())
+    );
   });
 });
-
