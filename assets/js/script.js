@@ -164,5 +164,16 @@ workoutForm.on("submit", function (e) {
 
     // Store the updated array in local storage
     localStorage.setItem("formData", JSON.stringify(existingData));
+    let workoutTime=formData.time
+    let functionalButton = $("<button>")
+    .attr({
+      id: `workoutTime-${workoutTime}`,
+      type: "button",
+      class: "btn btn-primary workout-time-button",
+      //"data-bs-target": "#exampleModal",
+      //"data-date": dayOfWeek,
+    })
+    .text(workoutTime).addClass()
+    $("td.col-10.text-center").append(functionalButton)
   }
 });
