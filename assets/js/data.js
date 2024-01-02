@@ -49,3 +49,12 @@ const getWorkoutDetails = function () {
     console.log("No workout found");
   }
 };
+
+function getWorkout() {
+  console.log("success");
+  let sWorkout = JSON.parse(localStorage.getItem("formData"));
+  $("#workoutName").append(" " + sWorkout[0].workoutName);
+  $("#difficulty").append(" " + sWorkout[0].difficulty);
+  $("#time").append(" " + sWorkout[0].time);
+}
+getWorkout();
