@@ -146,7 +146,6 @@ workoutForm.on("submit", function (e) {
     time: $("#time").val(),
     day: $("#exampleModal").data("date"),
   };
-  console.l
   // Retrieve existing data from local storage
   const existingData = JSON.parse(localStorage.getItem("formData")) || [];
 
