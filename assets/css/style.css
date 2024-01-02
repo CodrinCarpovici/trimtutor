@@ -219,6 +219,9 @@ footer {
   color: var(--font-color);
   text-align: center;
 }
+footer img {
+  margin-bottom: 10px;
+}
 
 footer a {
   color: var(--font-color);
