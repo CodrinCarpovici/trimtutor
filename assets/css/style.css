@@ -102,7 +102,7 @@ body {
 /* CALENDAR PAGE */
 
 /* Plus Button */
-#plus-button {
+.plus-button {
   background-color: var(--bright-green);
   color: var(--font-color);
   font-family: var(--headline-font);

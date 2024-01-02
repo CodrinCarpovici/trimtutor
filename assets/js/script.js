@@ -45,9 +45,9 @@ const displayTable = () => {
     let tableDataButton = $("<td>").addClass("col-2 text-center");
     let button = $("<button>")
       .attr({
-        id: "plus-button",
+        id: `plus-button-${dayOfWeek}`,
         type: "button",
-        class: "btn btn-primary",
+        class: "btn btn-primary plus-button",
         "data-bs-toggle": "modal",
         "data-bs-target": "#exampleModal",
         "data-date": dayOfWeek,
@@ -138,7 +138,7 @@ workoutForm.on("submit", function (e) {
     difficulty: $("#difficulty").val(),
     workoutName: $("#workoutName").val(),
     time: $("#time").val(),
-    day: $("#plus-button").data("date"),
+    day: $(".plus-button").data("date"),
   };
 
   // Retrieve existing data from local storage
@@ -148,10 +148,10 @@ workoutForm.on("submit", function (e) {
   const existingRecord = existingData.find(entry => entry.day === formData.day && entry.time === formData.time);
 
   if (existingRecord) {
-    // if time and day are the same don't create another record, alert needs changing
+    // If time and day are the same don't create another record, alert needs changing
     alert("A record with the same time and date already exists.");
   } else {
-    // add entry if time and date is different
+    // Add entry if time and date is different
     existingData.push(formData);
 
     // Store the updated array in local storage
