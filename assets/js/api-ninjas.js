@@ -8,6 +8,8 @@ var key = {
 let queryURL = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
 
 
+let sQuote = localStorage.
+
 //generate quote for main page
 function generateQuote(){
 fetch(queryURL, key)
@@ -20,9 +22,14 @@ fetch(queryURL, key)
     if (text.length > 50) {
         generateQuote();
     } else {
-    //create p tags for quote and author from api
-    let quote = $("<p>").text(data[0].quote);
-    let author = $("<p>").text("- " + data[0].author);
+    //create array of current quote from api
+    let cQuote = {
+     quote : data[0].quote,
+     author : data[0].author
+    }
+
+    localStorage.setItem("quote", JSOn.stringify(cQuote));
+
     //add quote and author onto page
     $("#quote").append(quote);
     $("#quote").append(author);
@@ -64,5 +71,3 @@ $("#muscleGroups").change(function() {
 $("#difficulty").change(function() {
   generateExercises();
 })
-
-generateQuote();

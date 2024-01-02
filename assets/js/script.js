@@ -138,9 +138,9 @@ workoutForm.on("submit", function (e) {
     difficulty: $("#difficulty").val(),
     workoutName: $("#workoutName").val(),
     time: $("#time").val(),
-    day: $(".plus-button").data("date"),
+    day: $(".plus-button").attr("data-date"),
   };
-
+  console.l
   // Retrieve existing data from local storage
   const existingData = JSON.parse(localStorage.getItem("formData")) || [];
 
