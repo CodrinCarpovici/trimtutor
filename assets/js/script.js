@@ -22,6 +22,10 @@ const muscleGroupsArray = [
 const table = $("tbody");
 // Time Select
 const select = $("#time");
+// Form
+const workoutForm = $("#workoutForm");
+// Save Button
+const saveBtn = $("#form-submit-btn")
 
 const displayTable = () => {
   // Current Day
@@ -60,6 +64,8 @@ const displayTable = () => {
       table.addClass("future");
     }
   }
+
+  
 };
 
 displayTable();
