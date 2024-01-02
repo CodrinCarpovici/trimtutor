@@ -171,7 +171,10 @@ tr {
 }
 
 /*time*/
-/*need to add some CSS for the buttons and the time input field*/
+
+.custom-dropdown {
+  margin-bottom: 20px; 
+}
 
 /* WORKOUT PAGE */
 
