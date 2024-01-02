@@ -137,4 +137,11 @@ function clearPastDaysFromTable() {
   const currentDate = dayjs();
   // Get all table rows
   const rows = $("#table tbody tr");
+  rows.each(function () {
+    const rowDate = dayjs($(this).find("td").attr("data-date"), "DD/MM/YYYY");
+    if (rowDate.isBefore(currentDate, "day")) {
+      // Remove the row if its date is before the current date
+      $(this).remove();
+    }
+  });
 }
