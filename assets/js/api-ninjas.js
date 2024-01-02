@@ -8,7 +8,21 @@ var key = {
 let queryURL = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
 
 
-let sQuote = localStorage.
+let sQuote = JSON.parse(localStorage.getItem("quote"));
+addQuote();
+console.log(sQuote);
+
+function addQuote() {
+if (sQuote == null) {
+  generateQuote();
+} else {
+  let quote = $("<p>").text(sQuote.quote);
+  let author = $("<p>").text("- " + sQuote.author);
+  $("#quote").append(quote);
+  $("#quote").append(author);
+  generateQuote();
+}
+}
 
 //generate quote for main page
 function generateQuote(){
@@ -28,11 +42,7 @@ fetch(queryURL, key)
      author : data[0].author
     }
 
-    localStorage.setItem("quote", JSOn.stringify(cQuote));
-
-    //add quote and author onto page
-    $("#quote").append(quote);
-    $("#quote").append(author);
+    localStorage.setItem("quote", JSON.stringify(cQuote));
   }});
 }
 
