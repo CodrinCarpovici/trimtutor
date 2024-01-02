@@ -13,7 +13,7 @@ const muscleGroupsArray = [
   "Lower_Back",
   "Middle_Back",
   "Neck",
-  "Quadrceps",
+  "Quadriceps", 
   "Traps",
   "Triceps",
 ];
