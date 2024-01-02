@@ -18,19 +18,20 @@ body {
   font-family: var(--content-font);
 }
 
-
 /* HOMEPAGE */
 /* Jumbotron */
 #homepageJumbotron {
   position: relative;
-  background: url("/assets/images/Blank\ 6\ Grids\ Collage\ \(1\).png") center
-    center;
+  background: url("/assets/images/Blank 6 Grids Collage (1).png") center center;
   background-size: cover;
   overflow: hidden;
   color: white;
   text-align: center;
   padding: 150px 20px; /* Increase padding for more height */
+  height: 100vh; /* Set the height to cover the full viewport height */
+  width: 100vw; /* Set the width to cover the full viewport width */
 }
+
 .overlay {
   position: absolute;
   top: 0;
