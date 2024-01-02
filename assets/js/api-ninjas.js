@@ -8,6 +8,22 @@ var key = {
 let queryURL = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
 
 
+let sQuote = JSON.parse(localStorage.getItem("quote"));
+addQuote();
+console.log(sQuote);
+
+function addQuote() {
+if (sQuote == null) {
+  generateQuote();
+} else {
+  let quote = $("<p>").text(sQuote.quote);
+  let author = $("<p>").text("- " + sQuote.author);
+  $("#quote").append(quote);
+  $("#quote").append(author);
+  generateQuote();
+}
+}
+
 //generate quote for main page
 function generateQuote(){
 fetch(queryURL, key)
@@ -20,12 +36,13 @@ fetch(queryURL, key)
     if (text.length > 50) {
         generateQuote();
     } else {
-    //create p tags for quote and author from api
-    let quote = $("<p>").text(data[0].quote);
-    let author = $("<p>").text("- " + data[0].author);
-    //add quote and author onto page
-    $("#quote").append(quote);
-    $("#quote").append(author);
+    //create array of current quote from api
+    let cQuote = {
+     quote : data[0].quote,
+     author : data[0].author
+    }
+
+    localStorage.setItem("quote", JSON.stringify(cQuote));
   }});
 }
 
@@ -64,5 +81,3 @@ $("#muscleGroups").change(function() {
 $("#difficulty").change(function() {
   generateExercises();
 })
-
-generateQuote();
