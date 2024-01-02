@@ -128,6 +128,12 @@ $(document).ready(function () {
   });
 });
 
+// Update the plus button click event handler
+$(".plus-button").click(function () {
+  const clickedDate = $(this).data("date");
+  $("#exampleModal").data("date", clickedDate);
+});
+
 // On form submit
 workoutForm.on("submit", function (e) {
   e.preventDefault();
@@ -138,7 +144,7 @@ workoutForm.on("submit", function (e) {
     difficulty: $("#difficulty").val(),
     workoutName: $("#workoutName option:selected").text(),
     time: $("#time").val(),
-    day: $(".plus-button").data("date"),
+    day: $("#exampleModal").data("date"),
   };
 
   // Retrieve existing data from local storage
