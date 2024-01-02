@@ -128,6 +128,12 @@ $(document).ready(function () {
   });
 });
 
+// Update the plus button click event handler
+$(".plus-button").click(function () {
+  const clickedDate = $(this).data("date");
+  $("#exampleModal").data("date", clickedDate);
+});
+
 // On form submit
 workoutForm.on("submit", function (e) {
   e.preventDefault();
@@ -136,25 +142,37 @@ workoutForm.on("submit", function (e) {
   const formData = {
     selectedMuscleGroup: $("#muscleGroups").val(),
     difficulty: $("#difficulty").val(),
-    workoutName: $("#workoutName").val(),
+    workoutName: $("#workoutName option:selected").text(),
     time: $("#time").val(),
-    day: $(".plus-button").data("date"),
+    day: $("#exampleModal").data("date"),
   };
-
   // Retrieve existing data from local storage
   const existingData = JSON.parse(localStorage.getItem("formData")) || [];
 
-  // Check if there is already a record with the same time
-  const existingRecord = existingData.find(entry => entry.day === formData.day && entry.time === formData.time);
+  // Check if there is already a record with the same date and time
+  const existingRecord = existingData.find(
+    (entry) => entry.day === formData.day && entry.time === formData.time
+  );
 
   if (existingRecord) {
-    // If time and day are the same don't create another record, alert needs changing
-    alert("A record with the same time and date already exists.");
+    // If time and day are the same, don't create another record, alert needs changing
+    alert("A record with the same date, time, and day already exists.");
   } else {
-    // Add entry if time and date is different
+    // Add entry if date and time are different
     existingData.push(formData);
 
     // Store the updated array in local storage
     localStorage.setItem("formData", JSON.stringify(existingData));
+    let workoutTime=formData.time
+    let functionalButton = $("<button>")
+    .attr({
+      id: `workoutTime-${workoutTime}`,
+      type: "button",
+      class: "btn btn-primary workout-time-button",
+      //"data-bs-target": "#exampleModal",
+      //"data-date": dayOfWeek,
+    })
+    .text(workoutTime).addClass()
+    $("td.col-10.text-center").append(functionalButton)
   }
 });
