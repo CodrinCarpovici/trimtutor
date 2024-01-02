@@ -172,7 +172,15 @@ tr {
 }
 
 /*time*/
-/*need to add some CSS for the buttons and the time input field*/
+
+.custom-dropdown {
+  margin-bottom: 20px; 
+}
+
+.btn-secondary {
+  padding: 0.2rem 0.5rem; 
+  font-size: 0.8rem;
+}
 
 /* WORKOUT PAGE */
 
