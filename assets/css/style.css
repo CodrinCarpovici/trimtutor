@@ -210,18 +210,19 @@ iframe {
 /* FOOTER */
 
 footer {
-  position: static;
+  position: fixed;
+  bottom: 0;
   margin-top: 25px;
   padding-top: 25px;
   width: 100%;
-  display: block;
-  height: 150px;
+  /* display: block; */
+  height: 60px;
   background-color: var(--background-color);
   color: var(--font-color);
   text-align: center;
 }
 footer img {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 footer a {
