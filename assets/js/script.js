@@ -1,4 +1,28 @@
+//Muscle groups and save choice into the local storage for the modal
+// Array of muscle groups
+const muscleGroupsArray = [
+  "Abdominals",
+  "Abductors",
+  "Biceps",
+  "Calves",
+  "Chest",
+  "Forearms",
+  "Glutes",
+  "Hamstrings",
+  "Lats",
+  "Lower Back",
+  "Middle Back",
+  "Neck",
+  "Quadrceps",
+  "Traps",
+  "Triceps",
+];
+
+// Document Elements
 const table = $("tbody");
+
+// Time Select
+const select = $("#time");
 
 const displayTable = () => {
   // Current Day
@@ -41,25 +65,6 @@ const displayTable = () => {
 
 displayTable();
 
-//Muscle groups and save choice into the local storage for the modal
-// Array of muscle groups
-const muscleGroupsArray = [
-  "Abdominals",
-  "Abductors",
-  "Biceps",
-  "Calves",
-  "Chest",
-  "Forearms",
-  "Glutes",
-  "Hamstrings",
-  "Lats",
-  "Lower Back",
-  "Middle Back",
-  "Neck",
-  "Quadrceps",
-  "Traps",
-  "Triceps",
-];
 // Get the selected element
 const muscleGroupsSelect = document.getElementById("muscleGroups");
 
@@ -97,7 +102,6 @@ $(document).ready(function () {
 
   // Function to increment time by 15 minutes
   function incrementTime() {
-    let select = $("#time");
     let currentTime = select.val();
     let newTime = moment(currentTime, "HH:mm")
       .add(15, "minute")
@@ -108,7 +112,6 @@ $(document).ready(function () {
 
   // Function to decrement time by 15 minutes
   function decrementTime() {
-    let select = $("#time");
     let currentTime = select.val();
     let newTime = moment(currentTime, "HH:mm")
       .subtract(15, "minute")
@@ -121,10 +124,12 @@ $(document).ready(function () {
   $("#decrementBtn").click(decrementTime);
 });
 
-// Enables WorkoutName field after MuscleGroup and Difficulty were selected 
+// Enables WorkoutName field after MuscleGroup and Difficulty were selected
 $(document).ready(function () {
-  $('#muscleGroups, #difficulty').on('change', function () {
-      $('#workoutName').prop('disabled', !($('#muscleGroups').val() && $('#difficulty').val()));
+  $("#muscleGroups, #difficulty").on("change", function () {
+    $("#workoutName").prop(
+      "disabled",
+      !($("#muscleGroups").val() && $("#difficulty").val())
+    );
   });
 });
-
