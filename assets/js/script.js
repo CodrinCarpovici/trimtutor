@@ -132,7 +132,7 @@ $(document).ready(function () {
 workoutForm.on("submit", function (e) {
   e.preventDefault();
 
-  // Getting form data to store in local storage
+  // Getting form data
   const formData = {
     selectedMuscleGroup: $("#muscleGroups").val(),
     difficulty: $("#difficulty").val(),
@@ -141,6 +141,20 @@ workoutForm.on("submit", function (e) {
     day: $("#plus-button").data("date"),
   };
 
-  // Store form data in local storage
-  localStorage.setItem("formData", JSON.stringify(formData));
+  // Retrieve existing data from local storage
+  const existingData = JSON.parse(localStorage.getItem("formData")) || [];
+
+  // Check if there is already a record with the same time
+  const existingRecord = existingData.find(entry => entry.day === formData.day && entry.time === formData.time);
+
+  if (existingRecord) {
+    // if time and day are the same don't create another record, alert needs changing
+    alert("A record with the same time and date already exists.");
+  } else {
+    // add entry if time and date is different
+    existingData.push(formData);
+
+    // Store the updated array in local storage
+    localStorage.setItem("formData", JSON.stringify(existingData));
+  }
 });
