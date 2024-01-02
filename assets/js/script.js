@@ -1,4 +1,31 @@
+//Muscle groups and save choice into the local storage for the modal
+// Array of muscle groups
+const muscleGroupsArray = [
+  "Abdominals",
+  "Abductors",
+  "Biceps",
+  "Calves",
+  "Chest",
+  "Forearms",
+  "Glutes",
+  "Hamstrings",
+  "Lats",
+  "Lower_Back",
+  "Middle_Back",
+  "Neck",
+  "Quadrceps",
+  "Traps",
+  "Triceps",
+];
+
+// Document Elements
 const table = $("tbody");
+// Time Select
+const select = $("#time");
+// Form
+const workoutForm = $("#workoutForm");
+// Save Button
+const saveBtn = $("#form-submit-btn");
 
 const displayTable = () => {
   // Current Day
@@ -18,9 +45,9 @@ const displayTable = () => {
     let tableDataButton = $("<td>").addClass("col-2 text-center");
     let button = $("<button>")
       .attr({
-        id: "plus-button",
+        id: `plus-button-${dayOfWeek}`,
         type: "button",
-        class: "btn btn-primary",
+        class: "btn btn-primary plus-button",
         "data-bs-toggle": "modal",
         "data-bs-target": "#exampleModal",
         "data-date": dayOfWeek,
@@ -41,25 +68,6 @@ const displayTable = () => {
 
 displayTable();
 
-//Muscle groups and save choice into the local storage for the modal
-// Array of muscle groups
-const muscleGroupsArray = [
-  "Abdominals",
-  "Abductors",
-  "Biceps",
-  "Calves",
-  "Chest",
-  "Forearms",
-  "Glutes",
-  "Hamstrings",
-  "Lats",
-  "Lower Back",
-  "Middle Back",
-  "Neck",
-  "Quadrceps",
-  "Traps",
-  "Triceps",
-];
 // Get the selected element
 const muscleGroupsSelect = document.getElementById("muscleGroups");
 
@@ -75,15 +83,6 @@ function populateMuscleGroups() {
 // Initial population of options
 populateMuscleGroups();
 
-// Event listener for the change event on the select element
-muscleGroupsSelect.addEventListener("change", function () {
-  // Get the selected value
-  const selectedMuscleGroup = muscleGroupsSelect.value;
-
-  // Store the selected value in local storage
-  localStorage.setItem("selectedMuscleGroup", selectedMuscleGroup);
-});
-
 // Time increment/decrement function
 $(document).ready(function () {
   // Initializing DateTimePicker
@@ -97,7 +96,6 @@ $(document).ready(function () {
 
   // Function to increment time by 15 minutes
   function incrementTime() {
-    let select = $("#time");
     let currentTime = select.val();
     let newTime = moment(currentTime, "HH:mm")
       .add(15, "minute")
@@ -108,7 +106,6 @@ $(document).ready(function () {
 
   // Function to decrement time by 15 minutes
   function decrementTime() {
-    let select = $("#time");
     let currentTime = select.val();
     let newTime = moment(currentTime, "HH:mm")
       .subtract(15, "minute")
@@ -121,10 +118,43 @@ $(document).ready(function () {
   $("#decrementBtn").click(decrementTime);
 });
 
-// Enables WorkoutName field after MuscleGroup and Difficulty were selected 
+// Enables WorkoutName field after MuscleGroup and Difficulty were selected
 $(document).ready(function () {
-  $('#muscleGroups, #difficulty').on('change', function () {
-      $('#workoutName').prop('disabled', !($('#muscleGroups').val() && $('#difficulty').val()));
+  $("#muscleGroups, #difficulty").on("change", function () {
+    $("#workoutName").prop(
+      "disabled",
+      !($("#muscleGroups").val() && $("#difficulty").val())
+    );
   });
 });
 
+// On form submit
+workoutForm.on("submit", function (e) {
+  e.preventDefault();
+
+  // Getting form data
+  const formData = {
+    selectedMuscleGroup: $("#muscleGroups").val(),
+    difficulty: $("#difficulty").val(),
+    workoutName: $("#workoutName").val(),
+    time: $("#time").val(),
+    day: $(".plus-button").data("date"),
+  };
+
+  // Retrieve existing data from local storage
+  const existingData = JSON.parse(localStorage.getItem("formData")) || [];
+
+  // Check if there is already a record with the same time
+  const existingRecord = existingData.find(entry => entry.day === formData.day && entry.time === formData.time);
+
+  if (existingRecord) {
+    // If time and day are the same don't create another record, alert needs changing
+    alert("A record with the same time and date already exists.");
+  } else {
+    // Add entry if time and date is different
+    existingData.push(formData);
+
+    // Store the updated array in local storage
+    localStorage.setItem("formData", JSON.stringify(existingData));
+  }
+});
