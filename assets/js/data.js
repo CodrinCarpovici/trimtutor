@@ -34,4 +34,18 @@ const showVideos = function (search) {
     });
 };
 
-showVideos("triceps curls");
+// showVideos("triceps curls");
+
+//  Get workout details
+const getWorkoutDetails = function () {
+  const workoutName = localStorage.getItem("workoutName");
+  const difficulty = localStorage.getItem("difficulty");
+
+  if (workoutName && difficulty) {
+    // Use the workout details to search for related videos
+    const searchQuery = `${workoutName} ${difficulty} workout`;
+    showVideos(searchQuery);
+  } else {
+    console.log("No workout found");
+  }
+};
