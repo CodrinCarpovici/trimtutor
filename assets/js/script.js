@@ -156,5 +156,6 @@ workoutForm.on("submit", function (e) {
 
     // Store the updated array in local storage
     localStorage.setItem("formData", JSON.stringify(existingData));
+    let workoutTime=formData.time
   }
 });
