@@ -201,6 +201,10 @@ tr {
   font-size: 0.8rem;
 }
 
+/* to style the workout button  .workout-time-button {
+  background: var(--hover-bright-green);
+} */
+
 /* WORKOUT PAGE */
 
 .card {

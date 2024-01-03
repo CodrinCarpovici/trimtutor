@@ -163,13 +163,12 @@ workoutForm.on("submit", function (e) {
 
     // Store the updated array in local storage
     localStorage.setItem("formData", JSON.stringify(existingData));
-
+   // Button to have selected workout from localstorage
     showTimeButton(formData.day, formData.time);
     getWorkoutDetails(formData.workoutName, formData.difficulty, formData.time);
     
   }
 });
-
 
 const showTimeButton = (day, workoutTime, difficulty, workoutName) => {
   const functionalButton = $("<a>")
