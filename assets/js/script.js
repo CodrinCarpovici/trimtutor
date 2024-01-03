@@ -167,8 +167,12 @@ workoutForm.on("submit", function (e) {
     // Store the updated array in local storage
     localStorage.setItem("formData", JSON.stringify(existingData));
     // Button to have selected workout from localstorage
-    showTimeButton(formData.day, formData.time);
-    getWorkoutDetails(formData.workoutName, formData.difficulty, formData.time);
+    showTimeButton(
+      formData.day,
+      formData.time,
+      formData.workoutName,
+      formData.difficulty
+    );
   }
 });
 
@@ -195,6 +199,7 @@ const showTimeButton = (day, workoutTime, difficulty, workoutName) => {
     };
     localStorage.removeItem("cWorkout");
     localStorage.setItem("cWorkout", JSON.stringify(sWorkout));
+    getWorkoutDetails(formData.workoutName, formData.difficulty, formData.time);
   });
 };
 
@@ -225,7 +230,9 @@ const displaySavedWorkouts = () => {
 
   localStorage.removeItem("formData");
   localStorage.setItem("formData", JSON.stringify(filteredData));
+  
   filteredData.forEach((workout) => {
+  savedData.forEach((workout) => {
     showTimeButton(
       workout.day,
       workout.time,
