@@ -173,6 +173,17 @@ workoutForm.on("submit", function (e) {
       //"data-date": dayOfWeek,
     })
     .text(workoutTime).addClass()
-    $("td.col-10.text-center").append(functionalButton)
+    $("td.col-10.text-center").append(functionalButton);
+
+    //add on click that saves the button data to local storage to grab correct video
+    functionalButton.on("click", function() {
+      const sWorkout= {
+        date: this.getAttribute('data-date'),
+        time: this.text,
+      }
+      console.log(sWorkout);
+      localStorage.removeItem("cWorkout");
+      localStorage.setItem("cWorkout", JSON.stringify(sWorkout));
+    })
   }
 });
