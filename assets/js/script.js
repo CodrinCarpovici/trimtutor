@@ -188,21 +188,19 @@ const showTimeButton = (day, workoutTime, difficulty, workoutName) => {
       href: "./dayworkoutPage.html",
     })
     .text(workoutTime);
-const clearButton = $("<button>")
-.attr({
-  type: "button",
-  class: "btn btn-danger clear-button",
-  "data-date": day,
-})
-.text("x")
-functionalButton.append(clearButton);
+  const clearButton = $("<button>")
+    .attr({
+      type: "button",
+      class: "btn btn-danger clear-button",
+      "data-date": day,
+    })
+    .text("x");
+  functionalButton.append(clearButton);
 
-clearButton.on("click", function () {
-functionalButton.remove() 
-clearButton.remove()
-}
-)
-
+  clearButton.on("click", function () {
+    functionalButton.remove();
+    clearButton.remove();
+  });
 
   $(`td.col-10[data-date="${day}"]`).append(functionalButton, clearButton);
 
@@ -246,9 +244,8 @@ const displaySavedWorkouts = () => {
 
   localStorage.removeItem("formData");
   localStorage.setItem("formData", JSON.stringify(filteredData));
-  
+
   filteredData.forEach((workout) => {
-  savedData.forEach((workout) => {
     showTimeButton(
       workout.day,
       workout.time,
