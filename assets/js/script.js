@@ -54,6 +54,7 @@ const displayTable = () => {
       })
       .text("+");
     tableDataButton.append(button);
+    //tableData.add($("<br>"))
     tableRow.append(tableData, tableDataButton);
     table.append(tableRow);
 
@@ -191,7 +192,7 @@ const clearButton = $("<button>")
   "data-date": day,
 })
 .text("x")
-//functionalButton.append(clearButton);
+functionalButton.append(clearButton);
 
 clearButton.on("click", function () {
 functionalButton.remove() 
