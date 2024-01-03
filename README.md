@@ -2,7 +2,7 @@
 
 ## Description
 
-Weather forecast app based on city searched, with memory of past searches.
+
 
 ## Table of Contents
 
@@ -19,10 +19,10 @@ N/A
 
 ## Usage 
 
-Go To: [codrincarpovici.github.io/trimtutor/](https://github.com/CodrinCarpovici/trimtutor) and view the website. 
+Go To: [codrincarpovici.github.io/trimtutor/](https://codrincarpovici.github.io/trimtutor/) and view the website. 
 
 NEEDS CHANGING !!!
-Once on the website you are presented with a search input box and a button that you can click to search. After adding a city to the input box and clicking search you will be able to see the current weather for today and the 5 day forecast below it. You will also notice that your search has been saved and stored in a button below the search form. Clicking on past history search buttons will allow you to view the forecastst for the specified city again. Those search buttons will also persist between page refreshes and be available to use. 
+Once on the website you are presented with the homepage. On the Homepage you can click on the logo and home links to return to the homepage and you can click on the Start Planning Now Button or the Calendar button which will take you to the Calendar Page. You can also see an inspirational quote display on subsequential visits. When you go to the calendar page.
 NEEDS CHANGING !!!
 
 ![TrimTutor Workout Planner](assets/images/trimtutor.png)
