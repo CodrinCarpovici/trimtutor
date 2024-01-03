@@ -222,6 +222,9 @@ const displaySavedWorkouts = () => {
       filteredData.push(e);
     }
   }
+
+  localStorage.removeItem("formData");
+  localStorage.setItem("formData", JSON.stringify(filteredData));
   filteredData.forEach((workout) => {
     showTimeButton(
       workout.day,
