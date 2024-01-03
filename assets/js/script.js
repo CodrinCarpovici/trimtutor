@@ -187,7 +187,7 @@ const showTimeButton = (day, workoutTime) => {
 const displaySavedWorkouts = () => {
   const savedData = JSON.parse(localStorage.getItem("formData")) || [];
 
-  // compare the time and sort it
+  // Compares the time and sorts it to return value
   savedData.sort((a, b) => {
     if (a.time < b.time) {
       return -1; 
