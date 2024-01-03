@@ -182,6 +182,10 @@ tr {
   font-size: 0.8rem;
 }
 
+.workout-time-button {
+  background: var(--hover-bright-green);
+}
+
 /* WORKOUT PAGE */
 
 .card {
