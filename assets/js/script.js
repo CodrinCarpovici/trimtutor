@@ -139,6 +139,7 @@ $(".plus-button").click(function () {
 workoutForm.on("submit", function (e) {
   e.preventDefault();
   const currentTime = dayjs().format("HH:mm");
+  const currentDate = dayjs().format("DD/MM/YYYY");
 
   // Getting form data
   const formData = {
@@ -159,7 +160,7 @@ workoutForm.on("submit", function (e) {
   if (existingRecord) {
     // If time and day are the same, don't create another record, alert needs changing
     alert("A workout with the same date, time, and day already exists.");
-  } else if (formData.time < currentTime) {
+  } else if (formData.time < currentTime && formData.day === currentDate) {
     alert("You cannot schedule a workout in the past!");
   } else {
     // Add entry if date and time are different
@@ -177,6 +178,7 @@ workoutForm.on("submit", function (e) {
   }
 });
 
+// Function to show the workout buttons if ther eis anything
 const showTimeButton = (day, workoutTime, difficulty, workoutName) => {
   const functionalButton = $("<a>")
     .attr({
