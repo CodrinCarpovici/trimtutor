@@ -169,24 +169,38 @@ workoutForm.on("submit", function (e) {
     
   }
 });
-// Button to appear on the form
-const showTimeButton = (day, workoutTime) => {
+
+const showTimeButton = (day, workoutTime, difficulty, workoutName) => {
   const functionalButton = $("<a>")
     .attr({
       type: "button",
       class: "btn btn-primary workout-time-button",
       "data-date": day,
+      "difficulty": difficulty,
+      "workoutName": workoutName,
       "href": "./dayworkoutPage.html"
     })
     .text(workoutTime);
 
   $(`td.col-10[data-date="${day}"]`).append(functionalButton);
+
+  functionalButton.on("click", function() {
+    const sWorkout= {
+      date: this.getAttribute('data-date'),
+      time: this.text,
+      difficulty: this.getAttribute('difficulty'),
+      workoutName: this.getAttribute('workoutName'),
+    }
+    localStorage.removeItem("cWorkout");
+    localStorage.setItem("cWorkout", JSON.stringify(sWorkout));
+  })
 };
-// Selected workout to be displayed from localstorage
+
+
 const displaySavedWorkouts = () => {
   const savedData = JSON.parse(localStorage.getItem("formData")) || [];
 
-  // Compares the time and sorts it to return value
+  // compare the time and sort it
   savedData.sort((a, b) => {
     if (a.time < b.time) {
       return -1; 
@@ -196,9 +210,9 @@ const displaySavedWorkouts = () => {
       return 0;
     }
   });
-// Button appears with selected workout time on workout day
+
   savedData.forEach((workout) => {
-    showTimeButton(workout.day, workout.time);
+    showTimeButton(workout.day, workout.time, workout.difficulty, workout.workoutName);
   });
 };
 
