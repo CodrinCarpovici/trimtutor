@@ -38,22 +38,15 @@ const showVideos = function (search) {
 
 //  Get workout details
 const getWorkoutDetails = function () {
-  //grab data from local storage for all saved workouts as well as button data from button pressed
-  let cWorkout = JSON.parse(localStorage.getItem("formData"));
+  //grab data from local storage for workout selected
   let sWorkout = JSON.parse(localStorage.getItem("cWorkout"));
 
-  //loop through all saved workouts until it matches button clicked data
-  let i= 0;
-  while (cWorkout[i].day != sWorkout.date && cWorkout[i].time != sWorkout.time) {
-    i++;
-  }
-
   //assign variables for workout selected and put text on page
-  const workoutName = cWorkout[i].workoutName;
-  const difficulty = cWorkout[i].difficulty;
+  const workoutName = sWorkout.workoutName;
+  const difficulty = sWorkout.difficulty;
   $("#workoutName").append(" " + workoutName);
   $("#difficulty").append(" " + difficulty);
-  $("#time").append(" " + cWorkout[i].time);
+  $("#time").append(" " + sWorkout.time);
   if (workoutName && difficulty) {
     // Use the workout details to search for related videos
     const searchQuery = `${workoutName} ${difficulty} workout`;

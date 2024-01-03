@@ -163,27 +163,59 @@ workoutForm.on("submit", function (e) {
 
     // Store the updated array in local storage
     localStorage.setItem("formData", JSON.stringify(existingData));
-    let workoutTime=formData.time
-    let functionalButton = $("<button>")
-    .attr({
-      id: `workoutTime-${workoutTime}`,
-      type: "button",
-      class: "btn btn-primary workout-time-button",
-      //"data-bs-target": "#exampleModal",
-      //"data-date": dayOfWeek,
-    })
-    .text(workoutTime).addClass()
-    $("td.col-10.text-center").append(functionalButton);
 
-    //add on click that saves the button data to local storage to grab correct video
-    functionalButton.on("click", function() {
-      const sWorkout= {
-        date: this.getAttribute('data-date'),
-        time: this.text,
-      }
-      console.log(sWorkout);
-      localStorage.removeItem("cWorkout");
-      localStorage.setItem("cWorkout", JSON.stringify(sWorkout));
-    })
+    showTimeButton(formData.day, formData.time);
+    getWorkoutDetails(formData.workoutName, formData.difficulty, formData.time);
+    
   }
 });
+
+
+const showTimeButton = (day, workoutTime, difficulty, workoutName) => {
+  const functionalButton = $("<a>")
+    .attr({
+      type: "button",
+      class: "btn btn-primary workout-time-button",
+      "data-date": day,
+      "difficulty": difficulty,
+      "workoutName": workoutName,
+      "href": "./dayworkoutPage.html"
+    })
+    .text(workoutTime);
+
+  $(`td.col-10[data-date="${day}"]`).append(functionalButton);
+
+  functionalButton.on("click", function() {
+    const sWorkout= {
+      date: this.getAttribute('data-date'),
+      time: this.text,
+      difficulty: this.getAttribute('difficulty'),
+      workoutName: this.getAttribute('workoutName'),
+    }
+    console.log(sWorkout);
+    localStorage.removeItem("cWorkout");
+    localStorage.setItem("cWorkout", JSON.stringify(sWorkout));
+  })
+};
+
+
+const displaySavedWorkouts = () => {
+  const savedData = JSON.parse(localStorage.getItem("formData")) || [];
+
+  // compare the time and sort it
+  savedData.sort((a, b) => {
+    if (a.time < b.time) {
+      return -1; 
+    } else if (a.time > b.time) {
+      return 1; 
+    } else {
+      return 0;
+    }
+  });
+
+  savedData.forEach((workout) => {
+    showTimeButton(workout.day, workout.time, workout.difficulty, workout.workoutName);
+  });
+};
+
+displaySavedWorkouts();
