@@ -54,6 +54,7 @@ const displayTable = () => {
       })
       .text("+");
     tableDataButton.append(button);
+    //tableData.add($("<br>"))
     tableRow.append(tableData, tableDataButton);
     table.append(tableRow);
 
@@ -187,8 +188,23 @@ const showTimeButton = (day, workoutTime, difficulty, workoutName) => {
       href: "./dayworkoutPage.html",
     })
     .text(workoutTime);
+const clearButton = $("<button>")
+.attr({
+  type: "button",
+  class: "btn btn-danger clear-button",
+  "data-date": day,
+})
+.text("x")
+functionalButton.append(clearButton);
 
-  $(`td.col-10[data-date="${day}"]`).append(functionalButton);
+clearButton.on("click", function () {
+functionalButton.remove() 
+clearButton.remove()
+}
+)
+
+
+  $(`td.col-10[data-date="${day}"]`).append(functionalButton, clearButton);
 
   functionalButton.on("click", function () {
     const sWorkout = {

@@ -157,11 +157,11 @@ tr {
 }
 
 .present {
-  --bs-table-bg: #e7b416;
+  --bs-table-bg: #b9b59f;
 }
 
 .future {
-  --bs-table-bg: #99c140;
+  --bs-table-bg: #d2ddba;
 }
 
 /* Modal/Form */
@@ -201,9 +201,26 @@ tr {
   font-size: 0.8rem;
 }
 
-/* to style the workout button  .workout-time-button {
-  background: var(--hover-bright-green);
-} */
+ /*to style the workout button*/
+.workout-time-button {
+  background-color: var(--olive-green);
+  color: #d3d3d3 !important;
+  border-radius: 30px;
+  font-size: 0.5em;
+  border: none;
+} 
+
+.clear-button {
+  background-color: var(--olive-green);
+  color: #d3d3d3 !important;
+  border-radius: 30px;
+  font-size: 0.5em;
+  border: none;
+}
+
+.clear-button:hover {
+  background: black;
+}
 
 /* WORKOUT PAGE */
 
