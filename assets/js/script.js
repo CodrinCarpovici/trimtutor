@@ -192,7 +192,6 @@ const showTimeButton = (day, workoutTime, difficulty, workoutName) => {
       difficulty: this.getAttribute('difficulty'),
       workoutName: this.getAttribute('workoutName'),
     }
-    console.log(sWorkout);
     localStorage.removeItem("cWorkout");
     localStorage.setItem("cWorkout", JSON.stringify(sWorkout));
   })
