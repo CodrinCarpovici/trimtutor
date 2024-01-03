@@ -137,6 +137,7 @@ $(".plus-button").click(function () {
 // On form submit
 workoutForm.on("submit", function (e) {
   e.preventDefault();
+  const currentTime = dayjs().format("HH:mm");
 
   // Getting form data
   const formData = {
@@ -156,7 +157,9 @@ workoutForm.on("submit", function (e) {
 
   if (existingRecord) {
     // If time and day are the same, don't create another record, alert needs changing
-    alert("A record with the same date, time, and day already exists.");
+    alert("A workout with the same date, time, and day already exists.");
+  } else if (formData.time < currentTime) {
+    alert("You cannot schedule a workout in the past!");
   } else {
     // Add entry if date and time are different
     existingData.push(formData);
@@ -202,6 +205,9 @@ const showTimeButton = (day, workoutTime, difficulty, workoutName) => {
 
 const displaySavedWorkouts = () => {
   const savedData = JSON.parse(localStorage.getItem("formData")) || [];
+  const currentDate = dayjs().format("DD/MM/YYYY");
+  const currentTime = dayjs().format("HH:mm");
+  const filteredData = [];
 
   // compare the time and sort it
   savedData.sort((a, b) => {
@@ -214,6 +220,18 @@ const displaySavedWorkouts = () => {
     }
   });
 
+  for (let e of savedData) {
+    if (e.day === currentDate && e.time < currentTime) {
+      console.log("It works!!");
+    } else {
+      filteredData.push(e);
+    }
+  }
+
+  localStorage.removeItem("formData");
+  localStorage.setItem("formData", JSON.stringify(filteredData));
+  
+  filteredData.forEach((workout) => {
   savedData.forEach((workout) => {
     showTimeButton(
       workout.day,
