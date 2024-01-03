@@ -183,7 +183,7 @@ const showTimeButton = (day, workoutTime) => {
 
   $(`td.col-10[data-date="${day}"]`).append(functionalButton);
 };
-
+// Selected workout to be displayed from localstorage
 const displaySavedWorkouts = () => {
   const savedData = JSON.parse(localStorage.getItem("formData")) || [];
 
