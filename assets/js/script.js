@@ -164,15 +164,43 @@ workoutForm.on("submit", function (e) {
 
     // Store the updated array in local storage
     localStorage.setItem("formData", JSON.stringify(existingData));
-    let workoutTime=formData.time
-    let functionalButton = $("<a>")
-    .attr({
-      id: `workoutTime-${workoutTime}`,
-      type: "button",
-      class: "btn btn-primary workout-time-button",
-      href: "./dayworkoutPage.html" 
-    })
-    .text(workoutTime).addClass()
-    $("td.col-10.text-center").append(functionalButton)
+   // Button to have selected workout from localstorage
+    showTimeButton(formData.day, formData.time);
+    getWorkoutDetails(formData.workoutName, formData.difficulty, formData.time);
+    
   }
 });
+// Button to appear on the form
+const showTimeButton = (day, workoutTime) => {
+  const functionalButton = $("<a>")
+    .attr({
+      type: "button",
+      class: "btn btn-primary workout-time-button",
+      "data-date": day,
+      "href": "./dayworkoutPage.html"
+    })
+    .text(workoutTime);
+
+  $(`td.col-10[data-date="${day}"]`).append(functionalButton);
+};
+
+const displaySavedWorkouts = () => {
+  const savedData = JSON.parse(localStorage.getItem("formData")) || [];
+
+  // compare the time and sort it
+  savedData.sort((a, b) => {
+    if (a.time < b.time) {
+      return -1; 
+    } else if (a.time > b.time) {
+      return 1; 
+    } else {
+      return 0;
+    }
+  });
+
+  savedData.forEach((workout) => {
+    showTimeButton(workout.day, workout.time);
+  });
+};
+
+displaySavedWorkouts();
