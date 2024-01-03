@@ -137,6 +137,7 @@ $(".plus-button").click(function () {
 // On form submit
 workoutForm.on("submit", function (e) {
   e.preventDefault();
+  const currentTime = dayjs().format("HH:mm");
 
   // Getting form data
   const formData = {
@@ -156,7 +157,9 @@ workoutForm.on("submit", function (e) {
 
   if (existingRecord) {
     // If time and day are the same, don't create another record, alert needs changing
-    alert("A record with the same date, time, and day already exists.");
+    alert("A workout with the same date, time, and day already exists.");
+  } else if (formData.time < currentTime) {
+    alert("You cannot schedule a workout in the past!");
   } else {
     // Add entry if date and time are different
     existingData.push(formData);
