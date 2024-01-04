@@ -1,7 +1,7 @@
 //setting key needed for both apis
 var key = {
     method: 'GET',
-    headers: { 'x-api-key': 'TIDNLHTjaGEfQDFhfKVjsg==w57dRJ7ghY0iLRZ4' }
+    headers: { 'x-api-key': '7yNxJ/7ug8fCp9NKM+CpWw==AXs4advBy6OETTeg' }
   }
 
 //api urls used in project
@@ -50,6 +50,7 @@ function generateExercises(){
   //get required properties for api from modal
   let mGroup = $('#muscleGroups').find(':selected').val();
   let difficulty = $('#difficulty').find(':selected').val();
+  console.log(mGroup, difficulty);
   //custom link for options selected
   let exerciseURL ="https://api.api-ninjas.com/v1/exercises?muscle=" + mGroup + "&difficulty=" + difficulty;
 

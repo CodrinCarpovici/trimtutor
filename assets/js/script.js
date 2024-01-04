@@ -87,32 +87,30 @@ populateMuscleGroups();
 // Time increment/decrement function
 $(document).ready(function () {
   // Initializing DateTimePicker
-  $("#time").datetimepicker({
-    format: "HH:mm",
-    stepping: 15,
-  });
+  const timeControl = document.querySelector('input[type="time"]')
+
 
   // default time is 12:00
-  $("#time").val("12:00");
+  timeControl.value= "12:00";
 
   // Function to increment time by 15 minutes
   function incrementTime() {
-    let currentTime = select.val();
+    let currentTime = timeControl.value;
     let newTime = moment(currentTime, "HH:mm")
       .add(15, "minute")
       .format("HH:mm");
-    select.val(newTime);
-    select.trigger("change");
+    timeControl.value =newTime;
+    timeControl.trigger("change");
   }
 
   // Function to decrement time by 15 minutes
   function decrementTime() {
-    let currentTime = select.val();
+    let currentTime = timeControl.value;
     let newTime = moment(currentTime, "HH:mm")
       .subtract(15, "minute")
       .format("HH:mm");
-    select.val(newTime);
-    select.trigger("change");
+    timeControl.value = newTime;
+    timeControl.trigger("change");
   }
 
   $("#incrementBtn").click(incrementTime);
