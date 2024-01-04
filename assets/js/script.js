@@ -172,8 +172,8 @@ workoutForm.on("submit", function (e) {
     showTimeButton(
       formData.day,
       formData.time,
-      formData.workoutName,
-      formData.difficulty
+      formData.difficulty, // changed to dificulty 
+      formData.workoutName, // chaned to workoutName
     );
   }
 });
