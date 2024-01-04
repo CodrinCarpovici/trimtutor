@@ -53,8 +53,9 @@ const displayTable = () => {
         "data-date": dayOfWeek,
       })
       .text("+");
+
+    tableData.append($("<br>"));
     tableDataButton.append(button);
-    //tableData.add($("<br>"))
     tableRow.append(tableData, tableDataButton);
     table.append(tableRow);
 
