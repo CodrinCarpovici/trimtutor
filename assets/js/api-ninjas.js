@@ -50,6 +50,7 @@ function generateExercises(){
   //get required properties for api from modal
   let mGroup = $('#muscleGroups').find(':selected').val();
   let difficulty = $('#difficulty').find(':selected').val();
+  console.log(mGroup, difficulty);
   //custom link for options selected
   let exerciseURL ="https://api.api-ninjas.com/v1/exercises?muscle=" + mGroup + "&difficulty=" + difficulty;
 
