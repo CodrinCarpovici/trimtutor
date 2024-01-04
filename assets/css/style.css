@@ -42,7 +42,10 @@ body {
 /* Jumbotron */
 #homepageJumbotron {
   position: relative;
-  background: url("/assets/images/Blank 6 Grids Collage (1).png") center center;
+  background-image: url("/assets/images/hero.png") ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-size: cover;
   overflow: hidden;
   color: white;
