@@ -88,11 +88,10 @@ populateMuscleGroups();
 // Time increment/decrement function
 $(document).ready(function () {
   // Initializing DateTimePicker
-  const timeControl = document.querySelector('input[type="time"]')
-
+  const timeControl = document.querySelector('input[type="time"]');
 
   // default time is 12:00
-  timeControl.value= "12:00";
+  timeControl.value = "12:00";
 
   // Function to increment time by 15 minutes
   function incrementTime() {
@@ -100,7 +99,7 @@ $(document).ready(function () {
     let newTime = moment(currentTime, "HH:mm")
       .add(15, "minute")
       .format("HH:mm");
-    timeControl.value =newTime;
+    timeControl.value = newTime;
   }
 
   // Function to decrement time by 15 minutes
@@ -169,8 +168,8 @@ workoutForm.on("submit", function (e) {
     showTimeButton(
       formData.day,
       formData.time,
-      formData.difficulty, // changed to dificulty 
-      formData.workoutName, // chaned to workoutName
+      formData.difficulty, // changed to dificulty
+      formData.workoutName // chaned to workoutName
     );
   }
 });
@@ -197,6 +196,14 @@ const showTimeButton = (day, workoutTime, difficulty, workoutName) => {
   functionalButton.append(clearButton);
 
   clearButton.on("click", function () {
+    const localStorageData = JSON.parse(localStorage.getItem("formData")) || [];
+    const updatedData = localStorageData.filter((item) => {
+      return !(item.day === day && item.time === workoutTime);
+    });
+
+    localStorage.removeItem("formData");
+    localStorage.setItem("formData", JSON.stringify(updatedData));
+
     functionalButton.remove();
     clearButton.remove();
   });
