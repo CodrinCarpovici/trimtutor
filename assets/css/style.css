@@ -201,6 +201,10 @@ tr {
   font-size: 0.8rem;
 }
 
+.modal-footer {
+  padding-top: 20px;
+}
+
  /*to style the workout button*/
 .workout-time-button {
   background-color: var(--olive-green);

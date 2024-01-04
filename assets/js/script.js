@@ -100,7 +100,6 @@ $(document).ready(function () {
       .add(15, "minute")
       .format("HH:mm");
     timeControl.value =newTime;
-    timeControl.trigger("change");
   }
 
   // Function to decrement time by 15 minutes
@@ -110,7 +109,6 @@ $(document).ready(function () {
       .subtract(15, "minute")
       .format("HH:mm");
     timeControl.value = newTime;
-    timeControl.trigger("change");
   }
 
   $("#incrementBtn").click(incrementTime);
